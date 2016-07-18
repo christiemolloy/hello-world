@@ -1,12 +1,24 @@
 html {
     -webkit-font-smoothing: antialiased;
-    background: #DB5461;
+}
+
+aboutme.html {
+    background: #FFF;
 }
 
 body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
+    background-color: #EF4753;
+}
+
+.aboutme {
+    background-color: white;
+}
+
+.contact-body {
+    	background-image: url("CHRISTIE-NEW-HALF.jpg");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,7 +33,7 @@ h1 {
 }
 h2 {
     margin-top: 1.3em;
-    text-align : center;
+    text-align: center;
 }
 
 .header {
@@ -29,11 +41,67 @@ h2 {
   text-align: left;
 }
 
+
+
 .header-2 {
     text-align: center;
     margin: 0em;
     
 }
+
+.header-3 {
+    color: #F4DB09;
+}
+
+.header-aboutme {
+    color: #EF4753;
+    font-size: 50px;
+    padding: 3em 2em 3em 1em;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.container1 {
+    width: 27%;
+    float: left;
+    margin: 0em 1.5em;
+}
+
+.textcontainer {
+    align-content: center;
+}
+
+hr {
+    height: 3px;
+    background-color: #EF4753;
+    text-decoration: none;
+    border: none;
+    
+}
+
+.secondline {
+    background-color: #483D3F;
+    height: 1.5px;
+    margin: 3em 0em 0em 0em;
+}
+
+h8 {
+    font-size: 2em;
+    color: #EF4753;
+}
+
+h9 {
+    font-weight: bold;
+}
+
+h10 {
+    color: #EF4753;
+}
+
+.indent {
+    text-indent: 50px;
+}
+
 
 .title-home {
     text-align: center;
@@ -52,6 +120,17 @@ h2 {
     font-family: helvetica;
     margin: auto;
     padding: 10px;
+    
+}
+
+a:hover {
+    color: #D8253B;
+}
+
+.a-aboutme {
+    color: #EF4753;
+    padding: 0em;
+    margin: 0em;
 }
 
 .ddicon {
@@ -71,7 +150,7 @@ h2 {
 }
 
 .info {
-    color: 483D3F;
+    color: #483D3F;
     width: 50%;
     font-size: 20pt;
     line-height: 1.3;

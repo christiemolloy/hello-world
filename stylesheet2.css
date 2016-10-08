@@ -101,22 +101,27 @@ ul.nav li a {
     margin: 0em 1.5em;
 }
 
-.secondline {
-    background-color: #483D3F;
-    height: 1.5px;
-    margin: 3em 0em 0em 0em;
-}
+
+
 
 .a-aboutme {
-    color: #EF4753;
+    color: lightpink;
     padding: 0em;
     margin: 0em;
-    font-size: 12pt;
+    font-size: 10pt;
     text-align: left;
 
 }
 
 
+.textcontainer {
+    font-size: 10pt;
+    padding: 0% 0% 0% 50%;
+}
+
+h8 {
+    font-size: 12pt;
+}
 
 
 

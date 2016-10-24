@@ -31,7 +31,8 @@ html, body {
   background:#fff
 }
 a {
-  text-decoration:none
+  text-decoration:none;
+    font-family: monospace;
 }
 li {
   list-style:none
@@ -66,10 +67,14 @@ ul.nav li a {
   color:lightpink;
 }
 
-
-
-
-
+.text { 
+    width: 90%;
+    font-family: monospace;
+    font-size: 10pt;
+    text-align: center;
+    display: inline-block;
+    margin: 1.5% 2.5%;
+}
 
 
 .project-image {
@@ -123,11 +128,53 @@ h8 {
     font-size: 12pt;
 }
 
+h9 { 
+    width: 80%;
+    font-family: h9font;
+    font-size: 4em;
+    text-align: center;
+    margin: 0px 200px 0px 0px;
+}
+
+h10 {
+    display: block;
+    text-align: center;
+    padding: 25% 10% 0% 10%;
+    font-family: h9font;
+    font-size: 4em;
+    margin: 0% 0% 25% 0%;
+    position: static;    
+}
+
+h11 { 
+    font-family: h9font;
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    position: static;   
+}
+
+a h11 {
+  text-decoration:none;
+    
+}
+
+.photos {    
+    display: inline;
+    float: left;
+    padding: 5px;
+}
 
 
+.photos-article { 
+    
+    width: 90%;
+    margin: 0% 10%;
+}
 
-
-
+.home {
+    position: fixed;
+}
 
 
 

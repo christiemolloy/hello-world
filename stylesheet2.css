@@ -176,6 +176,12 @@ a h11 {
     position: fixed;
 }
 
+.link {
+    float: left;
+    font-family: courier;
+    text-decoration: none;
+}
+
 
 
 

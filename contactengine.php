@@ -1,44 +1,53 @@
-<?php
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-$EmailFrom = "cm@bu.edu";
-$EmailTo = "cmolloy@bu.edu";
-$Subject = "Isolation Project";
-$Name = Trim(stripslashes($_POST['Name'])); 
-$Tel = Trim(stripslashes($_POST['Tel'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message'])); 
+<head>
+	<title>A Nice &amp; Simple Contact Form</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link rel="stylesheet" type="text/css" href="stylesheet2.css" />
+</head>
 
-// validation
-$validationOK=true;
-if (!$validationOK) {
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
-  exit;
-}
+<body>
 
-// prepare email body text
-$Body = "";
-$Body .= "Name: ";
-$Body .= $Name;
-$Body .= "\n";
-$Body .= "Tel: ";
-$Body .= $Tel;
-$Body .= "\n";
-$Body .= "Email: ";
-$Body .= $Email;
-$Body .= "\n";
-$Body .= "Message: ";
-$Body .= $Message;
-$Body .= "\n";
+	<div id="page-wrap">
 
-// send email 
-$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+		<img src="images/title.gif" alt="A Nice &amp; Simple Contact Form" /><br /><br />
+		<p>By <a href="http://css-tricks.com">CSS-Tricks</a></p>
+		
+		<p>There are a million contact form examples on the web, why this one? Because it's SIMPLE, it's FREE, it WORKS, it's VALID, and it's primarily styled with CSS.</p>
+		
+		<p>If you are trying to contact CSS-Tricks, DO NOT USE THIS FORM. This is just an example, my real <a href="http://css-tricks.com/contact/">contact form is here</a>.</p>
+		
+		<p><a href="http://css-tricks.com/examples/NiceSimpleContactForm.zip">[DOWNLOAD THIS EXAMPLE]</a></p>
+				
+		<div id="contact-area">
+			
+			<form method="post" action="contactengine.php">
+				<label for="Name">Name:</label>
+				<input type="text" name="Name" id="Name" />
+				
+				<label for="City">City:</label>
+				<input type="text" name="City" id="City" />
+	
+				<label for="Email">Email:</label>
+				<input type="text" name="Email" id="Email" />
+				
+				<label for="Message">Message:</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
 
-// redirect to success page 
-//if ($success){
- // print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
-//}
-//else{
-//  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
-//}
+				<input type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>
+			
+			<p>Check out a <a href="http://css-tricks.com/examples/NiceSimpleContactForm2">version of this</a> with SPAM protection.</p>
+		
+		</div>
+	
+	</div>
 
-?>
+</body>
+
+</html>

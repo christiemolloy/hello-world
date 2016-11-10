@@ -1,6 +1,6 @@
 <?php
 
-$EmailFrom = "cmolloy@bu.edu";
+$EmailFrom = "cm@bu.edu";
 $EmailTo = "cmolloy@bu.edu";
 $Subject = "Isolation Project";
 $Name = Trim(stripslashes($_POST['Name'])); 
@@ -40,4 +40,5 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 //else{
 //  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
 //}
-//?>
+
+?>

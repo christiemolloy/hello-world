@@ -157,6 +157,7 @@ a.right:hover {
     color:limegreen;
 }
 
+
 li:hover { 
 }
 
@@ -260,4 +261,12 @@ h12:hover {
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
     margin: 200pt 0pt 0pt 317pt;
+}
+
+
+.plane { 
+    position: fixed;
+    margin: 200pt 0pt 0pt 72pt;
+    opacity: 50%;
+    
 }

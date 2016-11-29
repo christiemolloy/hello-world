@@ -1,0 +1,263 @@
+body { 
+background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+h5 {
+    text-align: right;
+    position: fixed;
+    padding: 0px 0px 0px 95%;
+    font-family: helvetica neue;
+    margin: 0px 5px 0px 0px;
+    
+    
+}
+
+h1 {
+    font-family: helvetica neue;
+    font-size: 44pt; 
+    line-height: 60pt;
+    margin: 120pt 96pt 0pt 72pt;
+    width: 600pt;
+    
+}
+
+a.webjet:hover + a { 
+    color: crimson;
+    display: block;
+}
+
+h1:hover { 
+    color: crimson;
+}
+
+h2 {
+    font-family: helvetica neue;
+    line-height: 24pt;
+    font-size: 18pt; 
+    #margin: 100px 200px 18pt 200px;
+    #margin-left: auto;
+    #margin-right: auto;
+    width: 240pt;
+    margin: 0pt 10pt 0px 72pt;
+    float: left;
+    
+    
+}
+
+a { 
+    display: none;
+    text-align:right;
+    font-family: sans-serif;
+    margin: 0px 200px 0px 200px;
+    line-height: 54pt;
+    font-size: 12pt;
+
+}
+
+a: hover { 
+    font-size: 30pt; 
+
+}
+
+
+p {
+    font-family: helvetica neue;
+    line-height: 18pt;
+    font-size: 11pt; 
+    width: 360pt;
+    margin: 0pt 0pt 72pt 317pt;
+    padding: 0px 0px 0px 0px;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  
+}
+
+.together { 
+   padding: 240pt 0pt 0pt 0pt; 
+}
+
+
+
+
+
+h3 { 
+    font-family: helvetica neue;
+    color: black;
+    text-align: left;
+    padding: 0pt 0pt 72pt 720pt;
+    font-size: 15pt;
+    margin: 0px;
+    font-weight: 100px;
+}
+
+#h3:hover {
+    #background-color: black;
+    #color: white;
+    #font-size: 80pt;
+    #padding: 300px 0px;
+    #font-family: helvetica neue; 
+}
+
+
+h4 { 
+    font-family: helvetica neue;
+    color: forestgreen;
+    text-align: left;
+    font-size: 12pt;
+    line-height: 18pt;
+    margin: 50px 20px 0px 720pt;
+    position: relative;
+    top: -150pt;
+
+}
+
+
+li { 
+    list-style-type: none;
+    font-size: 10pt;
+    line-height: 15pt;
+    font-family: helvetica neue;
+    width: 200pt;
+}
+
+a.right { 
+    list-style-type: none;
+    font-size: 10pt;
+    line-height: 15pt;
+    font-family: helvetica neue;
+    width: 200pt;
+    display: inline;
+    margin: 0pt;
+    text-decoration: none;
+    color: forestgreen;
+
+}
+
+a.right2 {
+    list-style-type: none;
+    font-size: 10pt;
+    line-height: 15pt;
+    font-family: helvetica neue;
+    width: 200pt;
+    display: inline;
+    margin: 0pt;
+    text-decoration: none;
+    color: crimson; 
+}
+
+a.right2:hover { 
+    color: red;
+}
+
+a.right:hover { 
+    color:limegreen;
+}
+
+li:hover { 
+}
+
+.red { 
+color: crimson;
+}
+
+.red2 { 
+color: crimson;
+}
+
+.green { 
+color: limegreen;
+}
+
+ul { 
+    padding: 0px;
+    margin:  0pt 0pt 0pt 720pt;
+    float: left;
+    position: relative;
+    top: -150pt;
+}
+
+
+img.gif { 
+margin: 0px 350px;
+display: none;
+}
+
+h13:hover { 
+    color: deeppink;
+}
+
+
+
+h13:hover + img.gif { 
+    display: block;
+    
+}
+
+
+.a-fb {
+    font-family: helvetica neue;
+    color: black;
+    font-weight: 300;
+    margin: 0px 0px 0px 100px;
+    display: block;
+    text-align: left;
+    font-weight: 100;
+    font-size: 18pt;
+}
+
+.a-fb:hover + .profilepic { 
+    display: block;
+}
+
+.a-fb:hover { 
+    color: blue;
+    font-size: 14pt;
+}
+
+.a-fb:active + profilepic { 
+    display: block;
+}
+
+a.webjet {
+    display: block;
+    text-decoration: none;
+    margin: 0px 150px 0px 0px;
+    text-align: left;
+    color: black;
+}
+
+
+
+.profilepic { 
+    margin: 10px 200px 0px 200px;
+    display: none;
+}
+
+h12 { 
+    font-size: 18pt;
+}
+
+h12:hover { 
+    color: white;
+}
+
+
+.lang { 
+    color: darkorchid;
+}
+
+.lang:hover { 
+    color: purple;
+    font-size: 13pt;
+}
+
+.p2 { 
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    margin: 200pt 0pt 0pt 317pt;
+}

@@ -68,18 +68,17 @@ ul.nav li a {
 }
 
 .text { 
-    width: 90%;
-    font-family: monospace;
+    width: 200px;
+    font-family: tiempofont;
     font-size: 10pt;
-    text-align: center;
-    display: inline-block;
-    margin: 1.5% 2.5%;
+    text-align: left;
+    margin: 0pt 0pt 0pt 120pt;
+    float: left;
 }
 
 
 .project-image {
     margin: 0.5em;
-    float: left;
 }
 
 .container {
@@ -97,12 +96,10 @@ ul.nav li a {
 .textcontainer {
     align-content: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    float: left;
 }
 
 .container1 {
     width: 27%;
-    float: left;
     margin: 0em 1.5em;
 }
 
@@ -142,26 +139,43 @@ h10 {
     padding: 25% 10% 0% 10%;
     font-family: h9font;
     font-size: 4em;
-    margin: 0% 0% 25% 0%;
+    margin: 0% 0% 30% 0%;
     position: static;    
 }
 
+#h11  
+#    font-family: h9font;
+#    display: block;
+#    text-align: center;
+#    font-size: 3em;
+#   position: static;   
+
+
 h11 { 
     font-family: h9font;
-    display: block;
-    text-align: center;
     font-size: 3em;
-    position: static;   
+    position: static; 
+    font-family: tiempofont;
+    margin: 0px 400px 0px 0px;
+    
 }
 
 a h11 {
   text-decoration:none;
-    
+    font-family: tiempofont;
+    color: black;
+    font-weight: 700;
+    font-size: 54pt;
+    margin: 0px 0px 0px 20px;
+}
+
+a h11:hover { 
+    text-decoration: underline;
+    color: blue;
 }
 
 .photos {    
     display: inline;
-    float: left;
     padding: 5px;
 }
 
@@ -258,7 +272,6 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 body {
   font-family: courier;
   background: white;
-  color: #b3aca7;
 }
 
 header {
@@ -328,33 +341,51 @@ textarea:hover {
   color: black;
 }
 
-#submit {
-  width: 502px;
-  
-  padding: 0;
-  margin: -5px 0px 0px 0px;
-  
-  font-family: courier;
-  font-size: 0.875em;
-  color: #b3aca7;
-  
-  outline:none;
-  cursor: pointer;
-  
-  border: solid 1px #b3aca7;
-  border-top: none;
+h14 { 
+    font-family: tiempofont; 
+    font-weight: 700;
+    font-size: 40pt;
+    text-align: left;
+    margin: 0pt 0pt 60pt 60pt;
 }
 
-#submit:hover {
-  color: white;
+h10.wtiempo { 
+ font-family: tiempofont;
+    font-weight: 900;
+    font-size: 46pt;
+    text-align: left;
+    padding: 200pt 0pt 20pt 180pt;
+    margin: 0pt 72pt 0pt 0pt;
+    
+}
+
+.proj_photos { 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+.proj_photos img { 
+    margin: 0pt 0pt 40pt 0pt;
+}
+
+h16 { 
+    font-family: helvetica; 
+    font-size: 10pt;
+    margin: 0pt 0pt 30pt 210pt;
+    padding: 0pt 0pt 20pt 0pt;
 }
 
 
-.contactp { 
-font-size: 11pt;
-margin: 40px 120px;
-
+p { 
+font-family: tiempofont;
+    font-size: 12pt;
+    margin: 30pt 220pt 30pt 210pt;
 }
 
+.p-3 { 
+}
 
-
+.politicalphotos { 
+margin: 0pt 0pt 0pt 72pt;
+}

@@ -38,16 +38,48 @@ li {
   list-style:none
 }
 ul {
-  padding:0;
-  margin:0
+  padding:-150px;
+  margin: 0px 0px 0px -48pt;
 }
 .main-nav {
   width:45px;
   height:100%;
 margin-left: 95%;
     position:fixed;
+}
+
+.second-nav {
+  width:100%;
+  height:100%;
+  position:fixed;
+  #text-align: right;
+#margin: 24pt 48pt 0pt 570pt;
+font-weight: 700;
+#padding: 0pt 48pt 0pt 0pt;
+    margin: 0pt 100pt 0pt 0pt;
+    
 
 }
+
+.third-nav { 
+ width:400px;
+  height:100%;
+  position:fixed;
+  text-align: left;
+    margin: 138pt 0pt 0pt 66pt;
+    font-size: 10pt;
+    color: black;
+}
+
+ul.nav-3 li a {
+    text-decoration: none;
+    color: black;
+    font-family: helvetica neue;
+}
+
+
+
+
 ul.nav {
   width:21px;
 }
@@ -55,7 +87,7 @@ ul.nav li:first-child {
   padding-top:100px
 }
 ul.nav li {
-  padding-top: 150px;
+  padding-top: 75px;
 }
 ul.nav li a {
   -webkit-transform:rotate(270deg);
@@ -65,7 +97,23 @@ ul.nav li a {
   float:right;
   width:21px;
   color:lightpink;
+    font-size: 10pt;
 }
+
+ul.nav-2 li a {
+
+  width:21px;
+  color:black;
+    font-size: 12pt;
+    float: right;
+    text-align: right;
+    padding: 40px;
+    font-family: helvetica neue;
+    padding: 48pt 48pt 0pt 0pt;
+    padding-left: 30pt;
+    
+}
+
 
 .text { 
     width: 200px;
@@ -188,6 +236,7 @@ a h11:hover {
 
 .home {
     position: fixed;
+    margin: 48pt 0px 0px 48pt;
 }
 
 
@@ -389,3 +438,88 @@ font-family: tiempofont;
 .politicalphotos { 
 margin: 0pt 0pt 0pt 72pt;
 }
+
+
+.leftnav { 
+position: fixed;
+margin: 120pt 0pt 10pt 48pt;
+padding-top: 10pt;
+}
+
+
+
+h20 { 
+font-size: 36pt;
+#    line-height: 60pt;
+font-family: tiempofont;
+    float: none;
+    #overflow: scroll;
+    margin: 30pt 0pt 0pt 0pt;
+    color: black;
+    text-decoration: none;
+    
+
+}
+
+h20:hover { 
+    color: blue;
+    text-decoration: underline;
+    
+}
+
+h21 { 
+font-family: helvetica neue;
+    font-size: 10pt;
+    float: none;
+    overflow: scroll;
+    padding 10pt 0pt 0pt 0pt;
+}
+
+
+
+.main-left { 
+    width: 450px;
+    padding: 138pt 0pt 0pt 180pt;
+    float: left;
+    #height: 455px;
+    display: block;
+    #overflow: scroll;
+}
+
+.main-right { 
+    width: 250px;
+    margin: 138pt 0pt 0pt 530pt;
+    float: left;
+    height: 455px;
+    overflow: scroll;
+   position: fixed;
+    text-align: right;
+    
+    
+}
+
+
+p.titlesmall { 
+font-family: helvetica neue;
+float: none;
+    text-align: left;
+    font-size: 10pt;
+    margin: 0px 0px 24pt 0pt;
+}
+
+br { 
+font-size: 2px;
+
+}
+
+h20 a { 
+text-decoration: none;
+    font-family: tiempofont;
+    color: black;
+}
+
+h20 a:hover { 
+text-decoration: underline;
+color: lightpink;
+}
+

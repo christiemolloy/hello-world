@@ -46,11 +46,11 @@ ul {
   height:100%;
 margin-left: 95%;
     position:fixed;
+    font-family: tiempofont;
 }
 
 .second-nav {
-  width:100%;
-  height:100%;
+    width: 100%;
   position:fixed;
   #text-align: right;
 #margin: 24pt 48pt 0pt 570pt;
@@ -62,7 +62,7 @@ font-weight: 700;
 }
 
 .third-nav { 
- width:400px;
+ width:200px;
   height:100%;
   position:fixed;
   text-align: left;
@@ -73,10 +73,17 @@ font-weight: 700;
 
 ul.nav-3 li a {
     text-decoration: none;
-    color: black;
+    color: lightpink;
     font-family: helvetica neue;
 }
 
+ul.nav-3 li a:hover { 
+    color: black;
+}
+
+ul.nav li a:hover { 
+    color: black;
+}
 
 
 
@@ -103,7 +110,7 @@ ul.nav li a {
 ul.nav-2 li a {
 
   width:21px;
-  color:black;
+  color:lightpink;
     font-size: 12pt;
     float: right;
     text-align: right;
@@ -187,7 +194,7 @@ h10 {
     padding: 25% 10% 0% 10%;
     font-family: h9font;
     font-size: 4em;
-    margin: 0% 0% 30% 0%;
+    margin: 0% 0% 0% 0%;
     position: static;    
 }
 
@@ -321,6 +328,7 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 body {
   font-family: courier;
   background: white;
+margin: 0pt;
 }
 
 header {
@@ -432,11 +440,40 @@ font-family: tiempofont;
     margin: 30pt 220pt 30pt 210pt;
 }
 
+h24 { 
+font-family: tiempofont;
+    font-size: 10pt;
+}
+
+h25 { 
+font-family: tiempofont;
+    font-size: 11pt;
+    font-weight: 700;
+    margin: 0pt 12pt 12pt 0pt;
+}
+
+
+
 .p-3 { 
+}
+
+.p-4 {
+    padding-top: 150px;
+    font-size: 10pt;
+    
 }
 
 .politicalphotos { 
 margin: 0pt 0pt 0pt 72pt;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.politicalphotos img { 
+    width: 45%;
+    height: 45%;
+    margin: 12pt;
 }
 
 
@@ -473,17 +510,19 @@ font-family: helvetica neue;
     float: none;
     overflow: scroll;
     padding 10pt 0pt 0pt 0pt;
+    text-decoration: none;
+    color: black;
 }
 
 
 
 .main-left { 
-    width: 450px;
+    width: 300px;
     padding: 138pt 0pt 0pt 180pt;
     float: left;
-    #height: 455px;
-    display: block;
-    #overflow: scroll;
+    height: 455px;
+    over-flow: scroll;
+
 }
 
 .main-right { 
@@ -493,9 +532,14 @@ font-family: helvetica neue;
     height: 455px;
     overflow: scroll;
    position: fixed;
-    text-align: right;
-    
-    
+    text-align: right; 
+}
+
+.main { 
+    padding-top:160pt;
+    float: left;
+    #height: 455px;
+
 }
 
 
@@ -521,5 +565,300 @@ text-decoration: none;
 h20 a:hover { 
 text-decoration: underline;
 color: lightpink;
+    font-size: 42pt;
 }
 
+.print-photos { 
+    width: 600pt;
+    margin-left: auto;
+    margin-right: auto;  
+    padding-top: 138pt;
+    display: block;
+}
+
+
+.proj-photos {
+    width: 600pt;
+    margin-left: auto;
+    margin-right: auto;  
+    padding-top: 138pt;
+    display: block; 
+}
+
+.web-photos {
+    width: 600pt;
+    margin-left: auto;
+    margin-right: auto;  
+    padding-top: 138pt;
+    display: block; 
+}
+
+.ux-photos {
+    width: 600pt;
+    margin-left: auto;
+    margin-right: auto;  
+    padding-top: 138pt;
+    display: block; 
+}
+
+
+
+.print-photos-2 { 
+    width: 600pt;
+    margin-left: auto;
+    margin-right: auto;  
+    padding-top: 138pt;
+    position: fixed;
+    display: none;
+   
+}
+
+.print-photos img { 
+padding: 0pt 10pt 10pt 0pt;
+
+}
+
+.proj-photos img { 
+padding: 0pt 10pt 10pt 0pt;
+
+}
+
+.web-photos img { 
+padding: 0pt 10pt 10pt 0pt;
+
+}
+
+.ux-photos img { 
+padding: 0pt 10pt 10pt 0pt;
+
+}
+
+
+
+
+.print-caption { 
+font-size: 10pt;
+padding: 0pt;
+    margin: 0pt;
+    
+}
+
+.nav-2 li a:hover { 
+    color: black;
+}
+
+
+.pic-1:hover {
+    content: url('print-01-hover.jpg');
+}
+
+.pic-2:hover {
+    content: url('print-02-hover.jpg');
+}
+
+.pic-3:hover {
+    content: url('print-03-hover.jpg');
+}
+
+.pic-4:hover {
+    content: url('print-04-hover.jpg');
+}
+
+.pic-5:hover {
+    content: url('print-05-hover.jpg');
+}
+
+.pic-6:hover {
+    content: url('print-06-hover.jpg');
+}
+
+.third-nav a:hover { 
+    font-size: 12pt;
+}
+
+
+.print-posters {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 640pt;
+    padding-top: 138pt;
+    display: block;
+}
+
+.print-posters img { 
+width: 100%;
+    height: 100%;
+}
+
+.print-posters-col { 
+    width: 200pt;
+    float: left;
+    padding-right: 12pt;
+    
+}
+
+.print-posters-col img { 
+    margin-bottom: 12pt;
+}
+
+
+
+.pic-7:hover {
+    content: url('print-07-hover.jpg');
+}
+
+.pic-8:hover {
+    content: url('print-08-hover.jpg');
+}
+
+.pic-9:hover {
+    content: url('print-09-hover.jpg');
+}
+
+.pic-10:hover {
+    content: url('print-10-hover.jpg');
+}
+
+.pic-11:hover {
+    content: url('print-11-hover.jpg');
+}
+
+.pic-12:hover {
+    content: url('print-12-hover.jpg');
+}
+
+.pic-13:hover {
+    content: url('web-1-hover.jpg');
+}
+
+.pic-14:hover {
+    content: url('web-2-hover.jpg');
+}
+
+.pic-15:hover { 
+    content: url('hover-stord.jpg');
+}
+
+.pic-16:hover { 
+    content: url('hover-imate.jpg');
+}
+
+
+
+video { 
+    margin-left: auto;
+    margin-right:auto;
+    display: block;
+}
+
+.fg-style { 
+background-color: white;
+ height: 0px;   
+}
+
+.parallex-bg { 
+background-color: lightpink;
+height: 100%;
+    margin: 0pt;
+    padding: 0pt;
+    border: 0pt;
+    width: 100%;
+}
+
+h26 { 
+font-family: tiempofont;
+    font-size: 88pt;
+    font-weight: 700;
+   
+}
+
+h27 { 
+font-family: tiempofont;
+    font-size: 18pt;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+}
+
+h28 { 
+font-family: h9font;
+    font-size: 18pt;
+    color: black;
+}
+
+a h26 { 
+    color:white;
+    text-align: center;
+}
+
+.main-info a { 
+    background-color: white;
+    color: black;
+    font-family: tiempofont;
+}
+
+a h26:hover { 
+    font-size: 80pt;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.main-info { 
+    padding-top: 60pt;
+    color:white;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.title-center {
+    text-align: center;
+}
+
+.ux-col {
+    width: 145pt;
+    float: left;
+    padding-right: 12pt;
+    
+}
+
+.ux-col img { 
+    width: 90%;
+    height: 90%;
+}
+
+h30 { 
+    font-size: 8pt;
+    font-family: tiempofont;
+    font-weight: 700;
+
+    
+}
+
+
+h31 { 
+    font-size: 8pt;
+    font-family: tiempofont;
+    line-height: 6pt;
+    
+}
+
+
+.ux-txt { 
+margin-left: 10pt;
+}
+
+h32 { 
+    font-family: tiempofont;
+    font-size: 12pt;
+    font-weight: 500;
+    margin: 10pt 220pt 0pt 210pt;
+    
+}
+
+a h24 { 
+    color: black;
+    text-decoration: none;
+}

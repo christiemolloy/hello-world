@@ -1,5 +1,10 @@
+#p {
+    
+#    color: white;
+#}
+
 body { 
-background-color: white;
+background-color: #f5d3c8;
     margin: 0px;
     padding: 0px;
 }
@@ -270,3 +275,4 @@ h12:hover {
     opacity: 50%;
     
 }
+

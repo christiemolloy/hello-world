@@ -419,11 +419,13 @@ h10.wtiempo {
 .proj_photos { 
     width: 50%;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;  
+    margin-top: 60pt;
 }
 
 .proj_photos img { 
-    margin: 0pt 0pt 40pt 0pt;
+    text-align: center;
+    margin-top: 30pt;
 }
 
 h16 { 
@@ -455,6 +457,11 @@ font-family: tiempofont;
 
 
 .p-3 { 
+}
+
+.p-3 a { 
+    margin-left: 210pt;
+    margin-bottom: 60pt;
 }
 
 .p-4 {

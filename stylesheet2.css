@@ -890,7 +890,7 @@ background-color: black;
 h40 { 
     color: white;
     font-family: monospace;
-    padding: 0px 400px;
+    padding: 0px 500px;
 }
 
 h40 a { 
@@ -902,7 +902,3 @@ h40 a {
     height: 535.5px;
 }
 
-.woop { 
-    display: block;
-    margin: 0 auto;
-}

@@ -14,8 +14,8 @@ body, html {
 }
 
 .mcol { 
-    margin: 3%;
-    width: 94%;
+    margin: 5%;
+    width: 90%;
     float: left;
         position: static;
 text-align: center;
@@ -24,23 +24,23 @@ text-align: center;
 .lcol { 
     position: static;
     position: relative;
-    margin: 3%;
-    width: 44%;
+    margin: 5%;
+    width: 40%;
     float: left;
 }
 
 .rcol { 
-    margin: 3%;
+    margin: 5%;
     position: relative;
-    width: 44%;
+    width: 40%;
     float: right;
     position: static;
     text-align: right;
 }
 
 .rcol-2 { 
-    margin: 3%;
-    width: 44%;
+    margin: 5%;
+    width: 40%;
     float: right;
     text-align: right;
     position: static;

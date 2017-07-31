@@ -7,7 +7,7 @@ body, html {
 .project { 
     width: 100%;
     height: 100%;
-    padding: 0% 0%;
+    padding: 3% 0%;
     position: relative;
     display: block;
     min-height: 400px;

@@ -10,7 +10,7 @@ body, html {
     padding: 5% 0%;
     position: relative;
     display: block;
-    min-height: 400px;
+    min-height: 450px;
 }
 
 .mcol { 
@@ -64,9 +64,9 @@ h2 {
 }
 
 h3 { 
-    margin-left: 3%;
-    margin-right: 3%;
-    width: 94%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     text-align: right;
     font-family: helvetica neue;
     font-size: 12pt;

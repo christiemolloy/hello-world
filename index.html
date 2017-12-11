@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<html> 
+    <head>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
     <script src="http://malsup.github.com/jquery.form.js"></script> 
-    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="jquery.easing.min.js"></script>
-<script type="text/javascript" src="jquery.easy-ticker.js"></script>
-
-    <style>
-
-
-    html {
+        <style>
+        html {
       margin: 0;
       padding: 0;
     }
@@ -365,19 +357,35 @@
     color: white;
     border: 1px solid black;
 }
+            
 
+            .headlines {
+                width: 80%;
+            }
 
+            
+            .mainSection2 {
+                width: 100%;
+                display: flex;
+            }
+
+.vticker {
+                
+    font-size: 16pt;
+    width: 80%;
+    font-family: helvetica;
+
+    
+    }
         
         
-
-
-
-
-
-    </style>
-
-  </head>
-  <body>
+        
+        </style>
+    
+    </head>
+    
+    
+ <body>
 
     <div class="headerphoto">
           <img src="bu-campus.jpg">
@@ -426,9 +434,9 @@
 </div> 
     
 </div>
-
-
-    <div class="fulldiv">
+     
+     
+ <div class="fulldiv">
 
     <div class="col1">
         
@@ -554,7 +562,7 @@
     <div class="mainSection2">
   
 
-        <div class="col5">
+
             
 
 <script type="text/javascript">
@@ -598,50 +606,63 @@ $(document).ready(function(){
 
 <style>
 .vticker{
-	border: 1px solid red;
-	width: 400px;
+	border: 1px solid black;
+	width: 100%;
 }
 .vticker ul{
 	padding: 0;
 }
 .vticker li{
 	list-style: none;
-	border-bottom: 1px solid green;
-	padding: 10px;
+	border-bottom: 1px solid black;
+	padding: 15px;
 }
 .et-run{
 	background: red;
 }
 </style>
 
-<button class="aa">ADD</button>
-<button class="vis">SET VISIBLE 3</button>
-<button class="visall">SET VISIBLE ALL</button>
+        <div class="headlines">
 
-<button class="up">UP</button>
-<button class="down">DOWN</button>
-<button class="toggle">TOGGLE</button>
+<button class="vis">SHOW ALL ARTICLES</button>
+
 
 <div class="vticker">
 	<ul>
-		<li>Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
-		<li>List 2</li>
-		<li>List 3</li>
-		<li>List 4</li>
-		<li>List 5 </li>
-		<li class="ww">Hey... Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
+		<li>Former Terrier Women’s Ice Hockey Star Returns as Assistant Coach.</li>
+		<li>CAS scientists look to coral reefs for how Pacific gusts influence global climate</li>
+		<li>President Takes One-Time Payout from Supplemental Retirement Plan</li>
+		<li>All-Campus Orchestra and Concert Band Concert</li>
+		<li>BU Athletic Hall of Fame Inducts Class of 2017</li>
+		
 	</ul>
 </div>
         </div>
+            
+            
+            
+            
+        <div class="footer1">
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var bostonu = {lat: 42.350575, lng: -71.111330};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: bostonu
+        });
+        var marker = new google.maps.Marker({
+          position: bostonu,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-CEtj2lNJfEmM_RtIGdX-W69cJMsxUtU&callback=initMap">
+    </script>
 
-        
-        <div class="col6">
-        
-        </div>
-        
-        <div class="col7">
-        
-        </div>
+</div>
+     </div>
         
         
        <script type="text/javascript">
@@ -756,26 +777,7 @@ $(document).ready(function(){
    
 
 
-<div class="footer1">
-  <div id="map"></div>
-    <script>
-      function initMap() {
-        var bostonu = {lat: 42.350575, lng: -71.111330};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: bostonu
-        });
-        var marker = new google.maps.Marker({
-          position: bostonu,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-CEtj2lNJfEmM_RtIGdX-W69cJMsxUtU&callback=initMap">
-    </script>
 
-</div>
       
  <div class="footer">
       <p>Website created by Christie Molloy | CS601 </p>
@@ -982,7 +984,62 @@ function loadLatestTweet(){
       </script>
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-  </body>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.easing.min.js"></script>
+<script type="text/javascript" src="../jquery.easy-ticker.js"></script>
 
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var dd = $('.vticker').easyTicker({
+		direction: 'up',
+		easing: 'easeInOutBack',
+		speed: 'slow',
+		interval: 2000,
+		height: 'auto',
+		visible: 1,
+		mousePause: 0,
+		controls: {
+			up: '.up',
+			down: '.down',
+			toggle: '.toggle',
+			stopText: 'Stop !!!'
+		}
+	}).data('easyTicker');
+	
+	cc = 1;
+	$('.aa').click(function(){
+		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
+		cc++;
+	});
+	
+	$('.vis').click(function(){
+		dd.options['visible'] = 3;
+		
+	});
+	
+	$('.visall').click(function(){
+		dd.stop();
+		dd.options['visible'] = 0 ;
+		dd.start();
+	});
+	
+});
+</script>
+
+<style>
+
+        
+        </body>
+    
 </html>

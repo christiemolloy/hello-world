@@ -2,11 +2,16 @@
     <head>
         
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
     <script src="http://malsup.github.com/jquery.form.js"></script> 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+
+        
+
+
         <style>
         html {
       margin: 0;
@@ -73,19 +78,24 @@
       font-family: sans-serif;
       font-size: 12pt;
       width: 100%;
-      background-color: red;
+      background-color: #6D6D6D;
       padding: 5% 0;
+    display: flex;
+        flex-wrap: wrap;
 
     }
 
     #quoteDisplay {
-      width: 80%;
       text-align: center;
-      margin: 30px;
+        color: white;
+        width: 100%;
     }
 
     .quotes button{
-      margin: 0 250px;
+        display: block;
+
+        align-items: center;
+        float: right;
     }
 
 
@@ -110,8 +120,8 @@
 
     #map {
           height: 200px;
-          width: 50%;
-        float: right;
+          width: 80%;
+        float: left;
          }
         
     .footer1 {
@@ -360,7 +370,7 @@
             
 
             .headlines {
-                width: 80%;
+                width: 100%;
             }
 
             
@@ -372,14 +382,13 @@
 .vticker {
                 
     font-size: 16pt;
-    width: 80%;
+    width: 100%;
     font-family: helvetica;
 
     
     }
         
-        
-        
+         
         </style>
     
     </head>
@@ -434,6 +443,115 @@
 </div> 
     
 </div>
+     
+     
+       
+    <div class="mainSection2">
+  
+
+                  
+        <div class="footer1">
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var bostonu = {lat: 42.350575, lng: -71.111330};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: bostonu
+        });
+        var marker = new google.maps.Marker({
+          position: bostonu,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-CEtj2lNJfEmM_RtIGdX-W69cJMsxUtU&callback=initMap">
+    </script>
+
+</div>
+
+            
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var dd = $('.vticker').easyTicker({
+		direction: 'up',
+		easing: 'easeInOutBack',
+		speed: 'slow',
+		interval: 2000,
+		height: 'auto',
+		visible: 1,
+		mousePause: 0,
+		controls: {
+			up: '.up',
+			down: '.down',
+			toggle: '.toggle',
+			stopText: 'Stop !!!'
+		}
+	}).data('easyTicker');
+	
+	cc = 1;
+	$('.aa').click(function(){
+		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
+		cc++;
+	});
+	
+	$('.vis').click(function(){
+		dd.options['visible'] = 3;
+		
+	});
+	
+	$('.visall').click(function(){
+		dd.stop();
+		dd.options['visible'] = 0 ;
+		dd.start();
+	});
+	
+});
+</script>
+
+<style>
+.vticker{
+	border: 1px solid black;
+	width: 100%;
+}
+.vticker ul{
+	padding: 0;
+}
+.vticker li{
+	list-style: none;
+	border-bottom: 1px solid black;
+	padding: 15px;
+}
+.et-run{
+	background: red;
+}
+</style>
+
+        <div class="headlines">
+
+
+
+
+<div class="vticker">
+	<ul>
+		<li>Former Terrier Women’s Ice Hockey Star Returns as Assistant Coach.</li>
+		<li>CAS scientists look to coral reefs for how Pacific gusts influence global climate</li>
+		<li>President Takes One-Time Payout from Supplemental Retirement Plan</li>
+		<li>All-Campus Orchestra and Concert Band Concert</li>
+		<li>BU Athletic Hall of Fame Inducts Class of 2017</li>
+		
+	</ul>
+</div>
+<button class="vis">SHOW ALL ARTICLES</button>
+        </div>
+            
+            
+            
+  
+     </div>
      
      
  <div class="fulldiv">
@@ -539,7 +657,8 @@
   })
   </script>
       
-      
+
+     
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
@@ -552,117 +671,9 @@
 
         
         
-        
-    <div class="quotes">
-      <div id="quoteDisplay"><p>Click the button to see facts about BU!</p></div>
-      <button onclick="newFact()">New Fact</button>
-    </div>
+
       
-      
-    <div class="mainSection2">
-  
-
-
-            
-
-<script type="text/javascript">
-$(document).ready(function(){
-
-	var dd = $('.vticker').easyTicker({
-		direction: 'up',
-		easing: 'easeInOutBack',
-		speed: 'slow',
-		interval: 2000,
-		height: 'auto',
-		visible: 1,
-		mousePause: 0,
-		controls: {
-			up: '.up',
-			down: '.down',
-			toggle: '.toggle',
-			stopText: 'Stop !!!'
-		}
-	}).data('easyTicker');
-	
-	cc = 1;
-	$('.aa').click(function(){
-		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
-		cc++;
-	});
-	
-	$('.vis').click(function(){
-		dd.options['visible'] = 3;
-		
-	});
-	
-	$('.visall').click(function(){
-		dd.stop();
-		dd.options['visible'] = 0 ;
-		dd.start();
-	});
-	
-});
-</script>
-
-<style>
-.vticker{
-	border: 1px solid black;
-	width: 100%;
-}
-.vticker ul{
-	padding: 0;
-}
-.vticker li{
-	list-style: none;
-	border-bottom: 1px solid black;
-	padding: 15px;
-}
-.et-run{
-	background: red;
-}
-</style>
-
-        <div class="headlines">
-
-<button class="vis">SHOW ALL ARTICLES</button>
-
-
-<div class="vticker">
-	<ul>
-		<li>Former Terrier Women’s Ice Hockey Star Returns as Assistant Coach.</li>
-		<li>CAS scientists look to coral reefs for how Pacific gusts influence global climate</li>
-		<li>President Takes One-Time Payout from Supplemental Retirement Plan</li>
-		<li>All-Campus Orchestra and Concert Band Concert</li>
-		<li>BU Athletic Hall of Fame Inducts Class of 2017</li>
-		
-	</ul>
-</div>
-        </div>
-            
-            
-            
-            
-        <div class="footer1">
-  <div id="map"></div>
-    <script>
-      function initMap() {
-        var bostonu = {lat: 42.350575, lng: -71.111330};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: bostonu
-        });
-        var marker = new google.maps.Marker({
-          position: bostonu,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-CEtj2lNJfEmM_RtIGdX-W69cJMsxUtU&callback=initMap">
-    </script>
-
-</div>
-     </div>
+   
         
         
        <script type="text/javascript">
@@ -776,7 +787,11 @@ $(document).ready(function(){
 
    
 
-
+        
+    <div class="quotes">
+      <div id="quoteDisplay"><p>Click the button to see facts about BU!</p></div>
+      <button onclick="newFact()">New Fact</button>
+    </div>
 
       
  <div class="footer">

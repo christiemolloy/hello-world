@@ -1,211 +1,988 @@
 <!DOCTYPE html>
 <html>
+  <head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.easing.min.js"></script>
+<script type="text/javascript" src="jquery.easy-ticker.js"></script>
+
+    <style>
+
+
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+     .header {
+              text-align: center;
+            color: white;
+              margin: 0px;
+              padding: 25px;
+              background-color: red;
+ 
+              font-family: Helvetica;
+              font-size: 15px;
+
+            }
+
+    h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+          }
+
+    #dateandtime {
+                float: right;
+                font-size: 20px;
+                margin: 0;
+                color: white;
+            }
+
+    #headertext {
+      float: right;
+      color: white;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .footer {
+      display: flex;
+        justify-content: space-evenly;
+      clear: both;
+        
+      width:100%;
+      background-color: black;
+      font-family: helvetica;
+      font-size: 12pt;
+      padding: 3% 0%;
+        color: white;
+
+    }
+
+    .displaynews {
+      width: 50%;
+    }
+
+    .quotes {
+      font-family: sans-serif;
+      font-size: 12pt;
+      width: 100%;
+      background-color: red;
+      padding: 5% 0;
+
+    }
+
+    #quoteDisplay {
+      width: 80%;
+      text-align: center;
+      margin: 30px;
+    }
+
+    .quotes button{
+      margin: 0 250px;
+    }
+
+
+    form {
+        width: 100%;
+    }
+
+
+
+    .displayInputs {
+      width: 75%;
+      margin: auto 0;
+    }
+
+    tr p {
+      float: right;
+    }
+
+    table {
+      width: 30%;
+    }
+
+    #map {
+          height: 200px;
+          width: 50%;
+        float: right;
+         }
+        
+    .footer1 {
+       width: 100%;     
+    }
+        
     
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Christie Molloy</title>
-        <meta name="description" content="Christie Molloy's Portfolio.">
-        <link rel="stylesheet" href="stylesheet17.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    .formdisplay button {
+        width: 50%;
+        margin: 5%;
+
+    }
+
+    #form1 {
+
+
+
+      
+    }
+
+    .col1 {
+      width: 33%;
+      background-color: #F7F7F7;
+      padding: 15px;
+    }
         
-    </head>
+    .col2 {
+
+        width: 33%;
+        float: right;
+        background-color: #EFEEEE;
+        font: helvetica;
+    }
+
+    #form1 td label {
+      font-family: Helvetica;
+      font-size: 14px;
+
+    }
+        
+        label {
+            width: 50%;
+        }
+
+
+
+    h4 {
+      font-family: helvetica;
+        text-align: center;
+        width: 100%;
+        font-size: 14pt;
+    }
+
+    #formFields {
+        font-family: helvetica;
+        font-size: 10pt;
+    }
+
+    .fulldiv {
+        display: flex;
+        width: 100%;
+        background-color: lightgrey;
+    }
+        
+     .headerphoto img {
+        width: 100%;   
+
+        
+        }
+        
+        
+        
+        
+        .headerphoto {background-color: red;}
+                 
+    .col3 { 
+
+            width: 33%;
+            background-color: #F7F7F7;
+        }
+        
+    .fulldiv2 {
+            width: 100%;
+        display: flex;
+        }
+        
     
-    <body>
-        
-    <div class="project">
-        <div class="lcol">
-        <h1>Christie Molloy</h1>
+        .imageGallery {
+            display: flex;
+            width: 50%;
             
-        <h2>Hi there! My name is <a href="https://www.linkedin.com/in/christiemolloyy">Christie</a> and I am passionate about making the world a better place through design. Whether its designing campaigns to increase awareness, designing systems to increase efficiency, designing brands to increase engagement, or using design to answer questions, design is my contribution to the world.</h2>  
-            
-        <h2>As a designer it is important that I have an active voice in the community. See projects below that exemplify this.</h2>
-            
-        </div>
+        }
+        
+        .introPara {
+            display: flex;
+            width: 50%;
+            font-family: helvetica;
+            font-size: 11pt;
+            margin: 3%;
+            line-height: 1.5;
+        }
+        
+        .introPara p {
+            margin: 3%;
+        }
         
         
+        a {
+            text-decoration-line: none;
+            color: black;
+        }
+
+        .icon {
+            width: 100%;
+        }
+        
+        h3 {
+            font-family: helvetica;
+            text-align: center;
+            font-size: 14px;
+            color: #575555;
+        }
+        
+        
+ 
+.bs-example {
+	font-family: sans-serif;
+	position: relative;
+	margin: 100px;
+}
+.typeahead, .tt-query, .tt-hint {
+	border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 22px; /* Set input font size */
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 396px;
+}
+.typeahead {
+	background-color: #FFFFFF;
+}
+.typeahead:focus {
+	border: 2px solid #0097CF;
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+}
+.tt-menu {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 422px;
+}
+.tt-suggestion {
+	font-size: 22px;  /* Set suggestion dropdown font size */
+	padding: 3px 20px;
+}
+.tt-suggestion:hover {
+	cursor: pointer;
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+
+        .demo1{
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+.demo1 div div{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.demo2{
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.demo2 div div{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.demo3{
+    font-family: "Arial" sans-serif;
+    border: 3px solid #CE00CE;
+    margin-top: 10px;
+    font-size: 12px;
+    background: #639 url('http://www.aakashweb.com/resources/images/pages/jquery-easy-ticker/hot-news.png') no-repeat 10px 3px;
+    color: white;
+    border-radius: 10px;
+}
+.demo3 ul li{
+    padding: 5px 10px 5px 50px;
+    list-style: none;
+}
+
+
+.demo4{
+    border: 2px solid #FF9900;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.demo4 div div{
+    padding: 10px 10px 10px 60px;
+    border-bottom: 1px solid #FF9900;
+    background: url(http://www.aakashweb.com/resources/images/pages/jquery-easy-ticker/rss.png) no-repeat 15px center;
+    border-radius: 10px;
+}
+
+.demo5{
+    border: 2px solid #FF3333;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 500px;
+    -webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+.demo5 ul{
+    padding: 0;
+}
+.demo5 ul li{
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #FF3333;
+    border-radius: 10px;
+    list-type: none;
+    margin: 0;
+}
+.et-run{
+    background-color: #0cf;
+    color: white;
+    border: 1px solid black;
+}
+
+
+        
+        
+
+
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="headerphoto">
+          <img src="bu-campus.jpg">
+    
     </div>
+      
+    <div class="header">
         
+      <h1>Boston University Student Portal</h1>
+    <br>
+      <p>Boston University is a leading private research institution with two primary campuses in the heart of Boston and programs around the world.</p>
 
-    <div class="project">
-        
-        <h3>Campaign Strategy</h3>
-        
-        
-        <div class="lcol">
-        <h1>What if the percent of females interning in tech was 50?</h1>
+    </div>
+      
+          
+<div class="fulldiv2">
 
-        <h2>There would only be positive outcomes for society. During my internship at Twitter I created the initiative <a href="https://twitter.com/TerningTheTable">@TerningTheTable</a>: a campaign to increase the percentage of females interning in tech. Our goal is to #GetTo50 (percent) with a healthy number of URM's and engineering roles. We are doing this by fostering a community of female students who are in tech and those who aren't, in order to reach our goal.</h2>
-        </div>
-        
-        <div class="rcol">
-        <img class="pic" src="TerningTheTableFlyer.jpg" alt="friends" style="width:75%;">
-        </div>
-        
-     </div>
+<div class="introPara">
+    <p>The university has more than 3,900 faculty members and nearly 33,000 students, and is one of Boston's largest employers.It offers bachelor's degrees, master's degrees, and doctorates, and medical, dental, business, and law degrees through 17 schools and colleges on two urban campuses. The main campus is situated along the Charles River in Boston's Fenway-Kenmore and Allston neighborhoods, while the Boston University Medical Campus is in Boston's South End neighborhood.
 
-        
-<div class="project">
-        
-        <h3>Scanner + Mixed Media</h3>
-        
-        <div class="lcol">
-            <h1>What unhealthy distortions exist in your life?</h1>
 
-        
-            <h2>Being from outside of the U.S., my commentary on contemporary culture is unique. I chose to focus on the unhealthy distortions that exist within 
- beauty, money, fast food, and politics. By using the scanner to distort material, I was able to create distortion in multiple senses.</h2>
-            
-        </div>
+
+        </p>
+</div>
     
-        <div class="rcol">
-             <img class="pic" src="Scan93.png" alt="img" style="width:24%;">
-             <img class="pic" src="Scan94.png" alt="friends" style="width:24%;">
-            
-             <img class="pic" src="Scan95.png" alt="img" style="width:24%;">
-             <img class="pic" src="Scan96.png" alt="friends" style="width:24%;">
-            
-             <img class="pic" src="Scan97.png" alt="img" style="width:24%;">
-             <img class="pic" src="Scan98.png" alt="friends" style="width:24%;">
-            
-             <img class="pic" src="Scan99.png" alt="img" style="width:24%;">
-             <img class="pic" src="Scan100.png" alt="friends" style="width:24%;">
-            
-        </div>
-        
-    </div>     
-        
-<div class="height">
-     <div class="project">
-        
-        <h3>Campaign + Experiential Design</h3>
-        
-        
-        <div class="lcol">
-        <h1>What if "Donald Trump" is removed from the end of his quotes?</h1>
 
-            <h2>People break out in fury. Turns out CNN did a good job at normalizing Trump's voice. I created this campaign, not based on my political views, but as an experiment on students at college. When students at Boston University found the quotes from my campaign they took to social media to explain their disgust. When they learned that it was in fact Trump who said them, it made them think hard about their Presidential vote. Read articles <a href="http://thetab.com/us/bu/2016/10/27/campus-reactions-make-america-say-campaign-8756">here</a> and <a href="http://thetab.com/us/bu/2016/10/17/body-shaming-trump-quote-written-gsu-girls-bathroom-8513">here</a>.</h2>
-            
-            <a href="http://thetab.com/us/bu/2016/10/27/campus-reactions-make-america-say-campaign-8756"><h2>“...people are less informed than we think they are and those statements are not a reality for some people which reinforces the reason why we should be doing this." - Nick Rock, Professor at Boston University.</h2></a>
-            
-        </div>
-  
-        <div class="rcol-2">
-            <img class="pic" src="MASIA_1.png" alt="friends" style="width:75%;">
-        </div>
-         
-     </div>
+<div class="imageGallery">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+<!-- fotorama.css & fotorama.js. -->
+<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+<!-- 2. Add images to <div class="fotorama"></div>. -->
+<div class="fotorama">
+
+  <img src="bu-student.jpg">
+  <img src="bu-street.jpg">
+  <img src="redsox.jpg">
+  <img src="bu-hockey.jpg">
+  <img src="academics.jpg">
+    
 </div>
 
-    <div class="project">
-        
-        <br>
-        <h3>Graphic Design</h3>
-        
-        
-        <div class="lcol">
-        <h1>How do you recreate the same energy in 50 different ways?</h1>
-
-        <h2> I was tasked with choosing 1 iconic poster and recreating it in 50 different ways, over 50 days. I chose the iconic Public Theatre poster by the brilliant Paula Scher.
-        </h2>
-        </div>
-        
-        <div class="rcol">
-            <img class="pic" src="iterations_final.gif" alt="friends" style="width:48%;">
-            
-        </div>
-        
-    </div>  
-        
-        
-    <div class="project">
-        
-        <h3>Graphic Design</h3>
-        
-        
-        <div class="lcol">
-        <h1>Do you actually listen to both sides?</h1>
-
-        <h2>Three weeks prior to the election the media was about to explode, people were praying for their lives, and political arguments were happening in bars. We were assigned the task of creating a series of four posters to be hung on election day: one for Hillary, one against Hillary, one for Trump and one against Trump. It was exciting to play an active role in the community and to voice my opinion.</h2>
-        </div>
-        
-        <div class="rcol">
-        <img class="pic" src="hillary-against-poster-_11.jpg" alt="friends" style="width:33%;">
-        <img class="pic" src="trump_against_8.jpg" alt="friends" style="width:33%;">
-        <img class="pic" src="trump_FOR_1.jpg" alt="friends" style="width:33%;">
-        <img class="pic" src="hillary_poster_final_writing.jpg" alt="friends" style="width:33%;">
-        </div>
-        
-    </div>  
     
+</div> 
+    
+</div>
+
+
+    <div class="fulldiv">
+
+    <div class="col1">
+        
+    <form id="form1" action="/action_page.php">
+        
+          <table>
+              <h4>Student Details: </h4>
+              <h3>Input your student details</h3>
+              <tr>
+                <td><label>First name:</label></td>
+                <td><input type="text" name="fname" value=""></td>
+              </tr>
+
+              <tr>
+                <td><label>Last name:</label></td>
+                <td><input type="text" name="lname" value=""></td>
+              </tr>
+
+              <tr>
+                <td><label>Email:</label></td>
+                <td><input type="text" name="email" value=""></td>
+              </tr>
+
+              <tr>
+                <td><label>Year:</label></td>
+                <td><input type="text" name="year" value=""></td>
+              </tr>
+
+              <tr>
+                <td><label>School:</label></td>
+                <td><input type="text" name="school" value=""></td>
+              </tr>
+          </table>
+
+      
+    </form>
+
+    <div class="formdisplay">
+      <button onclick="myFunction()">Update Inputs</button>
+      <p id="formFields"></p>
+    </div>
+
+  </div>
+
+  <div class="col2">
+    <h4>2017-2018 Calendar</h4>
+    <h3>Select a date</h3>
+    <br>
+    <p id="datepickercss" style="font-family: helvetica; text-align: center;">Date: <input type="text" id="datepicker" style="font-family:helvetica; background-color: white;"></p>
+      
+
+
+  </div>
+        
+ <div class="col3">
+
+    
+     <h4>Weather in Boston</h4>
+    <div><a href="#" class="get_weather"><h3>Click here to get the weather in boston</h3></a></div>
+        <div id="result" style="display: none">
+        <div id="icon" style="width: 100%;"></div>
+        <div id="city" style="font-family: helvetica; text-align: center;"><strong></strong></div>
+        <div id="weather" style="font-family: helvetica; text-align: center;"></div>
+        <div id="time" style="font-family: helvetica; text-align: center;"></div>
+        <div><a href="#" class="hide" style="font-family: helvetica; text-align: center; margin: 100px;">Refresh Weather</a> 
+    </div>
+
+  </div>    
+
+
+</div>
+        
+        
+      </div>
+      
+<script type="text/javascript">
+  jQuery(function($){
+    function getWeather(){
+      $.ajax('http://api.wunderground.com/api/c6dc8e785d943109/conditions/q/MA/Boston.json', {
+        dataType: 'jsonp',
+        success: function(json) {
+          $('div#city strong').text(json.current_observation.display_location.full)
+          $('div#icon').html('<img src=' + json.current_observation.icon_url + '>')
+          $('div#weather').text(json.current_observation.temperature_string + " " + json.current_observation.weather);
+          $('div#time').text(json.current_observation.observation_time_rfc822);
+        }
+      });
+    }
+    $('a.get_weather').click(function(e) {
+      e.preventDefault();
+      $(this).hide();
+      getWeather();
+      $('#result').fadeIn(1000);
+    });
+    $('a.hide').click(function(e) {
+      e.preventDefault();
+      $('#result').hide();
+      $('a.get_weather').show();
+    })
+  })
+  </script>
+      
+      
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+      
+
+
+        
+        
+        
+    <div class="quotes">
+      <div id="quoteDisplay"><p>Click the button to see facts about BU!</p></div>
+      <button onclick="newFact()">New Fact</button>
+    </div>
+      
+      
+    <div class="mainSection2">
+  
+
+        <div class="col5">
+            
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var dd = $('.vticker').easyTicker({
+		direction: 'up',
+		easing: 'easeInOutBack',
+		speed: 'slow',
+		interval: 2000,
+		height: 'auto',
+		visible: 1,
+		mousePause: 0,
+		controls: {
+			up: '.up',
+			down: '.down',
+			toggle: '.toggle',
+			stopText: 'Stop !!!'
+		}
+	}).data('easyTicker');
+	
+	cc = 1;
+	$('.aa').click(function(){
+		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
+		cc++;
+	});
+	
+	$('.vis').click(function(){
+		dd.options['visible'] = 3;
+		
+	});
+	
+	$('.visall').click(function(){
+		dd.stop();
+		dd.options['visible'] = 0 ;
+		dd.start();
+	});
+	
+});
+</script>
+
+<style>
+.vticker{
+	border: 1px solid red;
+	width: 400px;
+}
+.vticker ul{
+	padding: 0;
+}
+.vticker li{
+	list-style: none;
+	border-bottom: 1px solid green;
+	padding: 10px;
+}
+.et-run{
+	background: red;
+}
+</style>
+
+<button class="aa">ADD</button>
+<button class="vis">SET VISIBLE 3</button>
+<button class="visall">SET VISIBLE ALL</button>
+
+<button class="up">UP</button>
+<button class="down">DOWN</button>
+<button class="toggle">TOGGLE</button>
+
+<div class="vticker">
+	<ul>
+		<li>Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
+		<li>List 2</li>
+		<li>List 3</li>
+		<li>List 4</li>
+		<li>List 5 </li>
+		<li class="ww">Hey... Triangles can be made easily using CSS also without any images. This trick requires only div tags and some CSS works. To get this trick, just use the code below.</li>
+	</ul>
+</div>
+        </div>
+
+        
+        <div class="col6">
+        
+        </div>
+        
+        <div class="col7">
+        
+        </div>
+        
+        
+       <script type="text/javascript">
+$(document).ready(function(){
+    // Defining the local dataset
+    var cars = ['Audi', 'BMW', 'Bugatti', 'Ferrari', 'Ford', 'Lamborghini', 'Mercedes Benz', 'Porsche', 'Rolls-Royce', 'Volkswagen'];
+    
+    // Constructing the suggestion engine
+    var cars = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: cars
+    });
+    
+    // Initializing the typeahead
+    $('.typeahead').typeahead({
+        hint: true,
+        highlight: true, /* Enable substring highlighting */
+        minLength: 1 /* Specify minimum characters required for showing result */
+    },
+    {
+        name: 'cars',
+        source: cars
+    });
+});  
+</script> 
+ 
+            
+
+
+
+
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("form1");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("formFields").innerHTML = text;
+    }
+    </script>
+<!--
+    <div class="displayinputs">
+    <form name='registration' action="/action_page.php" method="post" onSubmit="return formValidation(); return display();">
+      <table>
+        <tr>
+          <td><label>First Name: </label></td>
+          <td><p id="firstNameValue">hey</p></td>
+          <td><input type="text" name="firstName"/></td>
+        </tr>
+        <tr>
+          <td>Last Name: </td>
+          <td><p id="lastNameValue">hey</p></td>
+          <td><input type="text" name="lastName"/></td>
+        </tr>
+        <tr>
+          <td>Email: </td>
+          <td><p id="emailValue">hey</p></td>
+          <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+          <td>Address: </td>
+          <td><p id="addressValue">hey</p></td>
+          <td><input type="text" name="address"/></td>
+        </tr>
+        <tr>
+          <td>Select Year: </td>
+            <td><p id="yearValue">hey</p></td>
+          <td>
+            <select name="Year">
+            <option selected="" value="Default">Select Year</option>
+            <option value="FR">Freshman</option>
+            <option value="SO">Sophomore</option>
+            <option value="JU">Junior</option>
+            <option value="SE">Senior</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+            <td>Select School: </td>
+              <td><p id="yearValue">hey</p></td>
+              <td>
+              <select name="Year">
+              <option selected="" value="Default">Select Year</option>
+              <option value="FR">Freshman</option>
+              <option value="SO">Sophomore</option>
+              <option value="JU">Junior</option>
+              <option value="SE">Senior</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+              <td>Gender: </td>
+                <td><p id="genderValue">hey</p></td>
+                <td>
+                  <input type="checkbox" name="female" value="female" checked /><span>Female</span>
+                  <input type="checkbox" name="male" value="male" /><span>Male</span>
+              </td>
+          </tr>
+          <tr>
+              <td><input type="submit" name="submit" value="Submit"/></li></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+    </form>
+  -->
+
    
-       <div class="project">  
-     
-        <br>
-           <h3>Typography</h3>
-        
-        
-        <div class="lcol">
-         
-            <h1>What inspires how you look at the world?</h1>
 
-            <h2>As a native Australian, I couldn't work out what was missing when I moved to Boston. Was the weather difference really that big of a deal? Turns out it wasn't just the weather, it was the change in culture that stemmed from the weather, and everything that was associated with it. "Summer Wheels" explains the characteristics that I see in Summer and also see in myself. (88 page book).</h2>
-        </div>
-            
-        
-        
-        <div class="rcol-2">
-            <img class="pic" src="summerwheels.gif" alt="friends" style="width:85%;">
-        </div>
-         
-     </div> 
-        
-    <div class="project">
-        
-        <h3>Video + Campaign</h3>
-        
-        
-        <div class="lcol">
-        <h1>Is teenage violence a result of video games?</h1>
 
-        <h2>It is hard to tell for certain. But parents can be aware of it. I made this PSA to highlight the blurred line between life and video games; reality and fiction. Video currently being uploaded.</h2>
-            
-        </div>
-            
-        
-        <div class="rcol-2">
-            <img class="pic" src="videogame.png" alt="img" style="width:75%;">  
-        
-        </div>
-         
-     </div>
-        
-    <div class="project">
-        
-        <h3>Branding</h3>
-        
-        
-        <div class="lcol">
-            <h1>Who are you? Create your identity.</h1>
+<div class="footer1">
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var bostonu = {lat: 42.350575, lng: -71.111330};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: bostonu
+        });
+        var marker = new google.maps.Marker({
+          position: bostonu,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-CEtj2lNJfEmM_RtIGdX-W69cJMsxUtU&callback=initMap">
+    </script>
 
-            <h2>If you don't know who you are, how will anyone else? Tell me your vision and lets work together to make it a reality. Below are some logos that I have created.</h2>
-        </div>
-        
-        
-        <div class="mcol">
-            <img class="pic" src="logo-1.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-2.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-3.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-4.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-5.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-6.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-7.jpg" alt="friends" style="width:12%;">
-            <img class="pic" src="logo-8.jpg" alt="friends" style="width:12%;">
-        </div>
-         
-     </div>   
-        
-        
-     <h3>Email me to view work from my internships at <a href="https://twitter.com">Twitter</a>, <a href="https://splashthat.com">Splashthat</a> and <a href="https://36creative.com">36creative</a></h3>   
-        
-    </body>
+</div>
+      
+ <div class="footer">
+      <p>Website created by Christie Molloy | CS601 </p>
+      <button onclick="document.body.style.backgroundColor = '#C5D5E4';">Grey</button>
+      <button onclick="document.body.style.backgroundColor = 'white';">White</button>
+      <p id="dateandtime"></p>
+</div>
+
+
+<script>
+var facts = [
+'BU has changed its name multiple times: from Newbury Biblical Institute to Methodist General Biblical Institute of Concord',
+'Famous alums include Jason Alexander, Geena Davis, Emily Deschanel, Faye Dunaway, Rosie O’Donnell',
+'The Boston University bridge is the only spot in America where a plane can fly over a car driving over a train traveling over a boat.',
+'The fourth floor of the Sheraton Hall (aka the writing majors’ dorm) is supposedly haunted by playwright and Nobel Prize winner Eugene O’Neill.',
+'BU’s The Castle was originally built as a residence for William Lindsey',
+'The Agganis Arena is named after the talented football and baseball athlete for BU and Boston Red Sox player, Harry Agganis'
+]
+
+function newFact() {
+    var randomNumber = Math.floor(Math.random() * (facts.length));
+    document.getElementById('quoteDisplay').innerHTML = facts[randomNumber];
+}
+</script>
+
+
+
+
+
+
+<script>
+
+$(document).ready(function() {
+	loadLatestTweet();
+});
+
+//Twitter Parsers
+String.prototype.parseURL = function() {
+	return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(url) {
+		return url.link(url);
+	});
+};
+String.prototype.parseUsername = function() {
+	return this.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
+		var username = u.replace("@","")
+		return u.link("http://twitter.com/"+username);
+	});
+};
+String.prototype.parseHashtag = function() {
+	return this.replace(/[#]+[A-Za-z0-9-_]+/g, function(t) {
+		var tag = t.replace("#","%23")
+		return t.link("http://search.twitter.com/search?q="+tag);
+	});
+};
+function parseDate(str) {
+    var v=str.split(' ');
+    return new Date(Date.parse(v[1]+" "+v[2]+", "+v[5]+" "+v[3]+" UTC"));
+}
+
+function loadLatestTweet(){
+    var numTweets = 1;
+    var _url = 'GET https://api.twitter.com/1.1/statuses/user_timeline.json?BU_Tweets=twitterapi&count=2'+numTweets+'&include_rts=1';
+    $.getJSON(_url,function(data){
+    for(var i = 0; i< data.length; i++){
+            var tweet = data[i].text;
+            var created = parseDate(data[i].created_at);
+            var createdDate = created.getDate()+'-'+(created.getMonth()+1)+'-'+created.getFullYear()+' at '+created.getHours()+':'+created.getMinutes();
+            tweet = tweet.parseURL().parseUsername().parseHashtag();
+            tweet += '<div class="tweeter-info"><div class="uppercase bold"><a href="https://twitter.com/#!/CypressNorth" target="_blank" class="black">@CypressNorth</a></div><div class="right"><a href="https://twitter.com/#!/CypressNorth/status/'+data[i].id_str+'">'+createdDate+'</a></div></div>'
+            $("#twitter-feed").append('<p>'+tweet+'</p>');
+        }
+    });
+}
+
+</script>
+
+
+
+
+<script>
+
+    function updateTime() {
+      window.document.getElementById("dateandtime").innerHTML = Date();
+    }
+    setInterval(updateTime, 1000)
+
+
+
+    function formValidation()
+    {
+      var vfirstName = document.registration.firstName;
+      var vlastName = document.registration.lastName;
+      var vemail = document.registration.email;
+      var vaddress = document.registration.address;
+      var vyear = document.registration.year;
+      var vschool = document.registration.school;
+      var vfemale = document.registration.female;
+      var vmale = document.registration.male;
+
+      if(allLetter(vfirstName))
+      {
+      if(allLetter(vlastName))
+      {
+      if(ValidateEmail(vemail))
+      {
+      if(alphanumeric(vaddress))
+      {
+      if(validsex(vfemale,vmale))
+      {
+      }
+      }
+      }
+      }
+      }
+      return false;
+
+
+
+
+
+    }
+
+    function ValidateEmail(vemail)
+    {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(vemail.value.match(mailformat))
+        {
+          return true;
+        }
+        else
+        {
+          alert("You have entered an invalid email address!");
+          vemail.focus();
+          return false;
+        }
+    }
+
+    function allLetter(name)
+    {
+      var letters = /^[A-Za-z]+$/;
+        if(name.value.match(letters))
+        {
+          return true;
+        }
+        else
+        {
+        alert('Username must have alphabet characters only');
+        name.focus();
+        return false;
+        }
+    }
+
+    function alphanumeric(vaddress)
+    {
+      var letters = /^[0-9a-zA-Z]+$/;
+        if(vaddress.value.match(letters))
+        {
+          return true;
+        }
+        else
+        {
+        alert('User address must have alphanumeric characters only');
+        vaddress.focus();
+        return false;
+        }
+      }
+
+      function validsex(umsex,ufsex)
+      {
+        x=0;
+
+        if(umsex.checked)
+        {
+          x++;
+        } if(ufsex.checked)
+        {
+          x++;
+        }
+        if(x==0)
+        {
+          alert('Select Male/Female');
+          umsex.focus();
+          return false;
+        }
+        else
+        {
+          alert('Form Succesfully Submitted');
+          window.location.reload()
+          return true;
+        }
+      }
+
+      //function display() {
+
+        //document.getElementById('firstNameDisplay').innerHTML =
+        //document.form.vfirstName.value;
+
+
+
+      //  document.getElementById('firstNameDisplay').innerHTML =
+      //        document.getElementById("firstName").value;
+
+
+      </script>
+
+
+
+  </body>
+
+</html>

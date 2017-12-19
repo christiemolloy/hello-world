@@ -12,8 +12,7 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Stylesheet
-    ================================================== -->
+<!-- Stylesheet -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
@@ -21,34 +20,41 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 <body>
-<!-- Navigation
-    ==========================================-->
+<!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>SF<strong></strong></a> </div>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>SF<strong></strong></a>
+      <p id="dateandtime" style="color:white"></p>
+      </div>
+      
+      <script>
+        var updateTime = () => {
+        window.document.getElementById("dateandtime").innerHTML = Date();
+        }
+        setInterval(updateTime, 1000)
+      </script>
     
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- NAV BAR -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Home</a></li>
         <li><a href="#about-section" class="page-scroll">ABOUT</a></li>  
-        <li><a href="#services-section" class="page-scroll">DINING</a></li>
-        <li><a href="#works-section" class="page-scroll">DRINK</a></li>
-        <li><a href="#about-section" class="page-scroll">SPOTS</a></li>
-        <li><a href="#team-section" class="page-scroll">WORK</a></li>
+        <li><a href="#dining-section" class="page-scroll">DINING</a></li>
+        <li><a href="#spots-section" class="page-scroll">SPOTS</a></li>
+        <li><a href="#events-section" class="page-scroll">EVENTS</a></li>
         <li><a href="#contact-section" class="page-scroll">EVENTS</a></li>
+          
+          
+          
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -59,12 +65,94 @@
 <!-- Header -->
 <header class="text-center" name="home">
   <div class="intro-text">
+      
+    <div id="vid" style="display: none;">
+    <iframe id="playVideo" src="https://player.vimeo.com/video/166946121" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    </div>
+      
     <h1>AN INTERNS GUIDE</h1>
-    <h1><strong>SAN FRANCISCO</strong></h1>
-    <p>We are a full-service integrated creative agency</p>
-    <a href="#about-section" class="btn btn-default btn-lg page-scroll">LEARN MORE</a> </div>
+    <h1 onmouseover="bigText(this)" onmouseout="normalText(this)"><strong>SAN FRANCISCO</strong></h1>
+      <button class="btn btn-default btn-lg page-scroll" onclick=playVid()>START</button>
+
+    
+    <!-- Play Video Function -->  
+      
+    <script> 
+      var playVid = () => {
+          var x = document.getElementById("vid");
+          if(x.style.display === "none") {
+              x.style.display = "block";
+          } 
+          else {
+              x.style.display = "none";
+          }
+          }
+      
+    </script>
+      
+      
+    <!--scroll over text to make it larger-->
+    <script>
+        var bigText = (a) => {
+            a.style.fontSize = "54pt";
+            a.style.color = "orange";
+        }
+        
+        var normalText = (a) => {
+            a.style.fontSize = "48pt";
+            a.style.color = "white";
+        }
+    </script>
+       
+    <script>
+var move = () => {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+    
 </header>
     
+<!-- SEARCH BOX -->
+<div id="search-section" class="text-center" style="background-color: #0A9297">
+<div class="container">
+<div class="section-title center">
+
+
+  <form class="search-container" name="theForm">
+    <input type="text" id="search-bar" name="textA" placeholder="Search about San Francisco here!" style="font-size: 12pt; width: 300px; height: 40px; margin: 2%; text-align: center;">
+      
+
+  </form>
+    
+    <button class="button" onclick="searchWord(document.theForm.textA.value)">Search</button>  
+    
+    <br>
+    <p id="return" style="margin: 2%; color: white;"></p>
+    
+    <script>
+        var searchWord = (str) =>
+        {
+            var result = "You searched for "+str;
+     
+            document.getElementById("return").innerHTML = result;
+        }
+
+    </script>
+
+    </div>
+    </div>
+    </div>
     
     
 <!-- About Section -->
@@ -80,9 +168,10 @@
     </div>
     <div class="row">
       <div class="col-md-6"> 
+            <!-- Google Maps API-->
             <div id="map"></div>
             <script>
-                function initMap() {
+                var initMap = () => {
                     var bostonu = {lat: 37.774929, lng: -122.419416};
                     var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 16,
@@ -103,10 +192,8 @@
       <div class="col-md-6">
         <div class="about-text">
           
-          <h3>Outlandish Notions</h3>
               <p>Consider permission permanently granted to be outlandish: other towns may surprise you, but in San Francisco you will surprise yourself. Good times and social revolutions tend to start here, from manic gold rushes to blissful hippie be-ins. If there's a skateboard move yet to be busted, a technology still unimagined, a poem left unspoken or a green scheme untested, chances are it's about to happen here. Yes, right now. This town has lost almost everything in earthquakes and dot-com gambles, but never its nerve.</p>
-
-              <h3>Food & Drink</h3>
+            
               <p>Every available Bay Area–invented technology is needed to make dinner decisions in this city, with the most restaurants and farmers markets per capita in North America, supplied by pioneering local organic farms. San Francisco set the gold standard for Wild West saloons, but drinking was driven underground in the 1920s with Prohibition. Today, San Francisco celebrates its speakeasies and vintage saloons – and with Wine Country and local distillers providing a steady supply of America's finest hooch, the West remains wild.</p>
           
         </div>
@@ -116,7 +203,7 @@
 </div>
 
 <!-- EATING SECTION -->
-<div id="services-section" class="text-center">
+<div id="dining-section" class="text-center">
   <div class="container">
     <div class="section-title center">
       <h2>EATS IN SAN FRANCISCO</h2>
@@ -153,12 +240,12 @@
  
     
 <!-- DRINKING SECTION -->
-<div id="services-section" class="text-center">
+<div id="dining-section" class="text-center">
   <div class="container">
     <div class="section-title center">
       <h2>DRINKS IN SAN FRANCISCO</h2>
       <hr>
-      <div class="clearfix"></div>
+      <div id="1" class="clearfix"></div>
       <p>Happy hour is that precious reprieve from San Francisco's unrelenting drainage of your bank account. It's the time of day when anything seems possible — even a beer that won't require taking out a mortgage or choosing between snacks OR drinks. And with more and more hot spots opening around town, that means more and more happy hours to choose from.</p>
     </div>
     <div class="space"></div>
@@ -191,14 +278,14 @@
 
     
     
-<!-- Portfolio Section -->
-<div id="about-section">
+<!-- Spots Section -->
+<div id="spots-section">
   <div class="container"> <!-- Container -->
     <div class="section-title text-center center">
       <h2>SPOTS IN SAN FRANCISCO</h2>
       <hr>
       <div class="clearfix"></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamcommodo nibh ante facilisis.</p>
+      <p>Check out these top locations in San Francisco.</p>
     </div>
     <div class="categories">
       <ul class="cat">
@@ -309,7 +396,7 @@
 </div>
     
 <!-- About Section -->
-<div id="about-section">
+<div id="events-section">
   <div class="container">
     <div class="section-title text-center center">
       <h2>EVENTS IN SAN FRANCISCO</h2>
@@ -347,42 +434,43 @@
 	</div>
 	<script src="js/vanillacalendar.js" type="text/javascript"></script>
 	<script>
-		window.addEventListener('load', function () {
-		  vanillacalendar.init();
-		})
+        
+        var result = () => {vanillacalendar.init()};
+        
+		window.addEventListener('load', result)
+        
 	</script> 
           
-          
-          
-          
-          
+        
         </div>
       
     </div>
   </div>
 </div>
 
-<!-- Achievements Section -->
 <div id="achievements" class="section dark-bg">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-3">
         <div class="achievement-box"> 
           <span class="count">139</span>
-          
           <h4>Cince De Mayo</h4>
             <br>
-          <button id="myBtn">See Event</button>
             <!-- The Modal -->
             <div id="myModal" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
             <span class="close">&times;</span>
             <p>San Francisco’s Latino residents and their friends celebrate General Ignacio Zaragoza’s defeat of the French army at Puebla in 1862 with this raucous weekend of parades, fireworks and music. Bring your sombrero to the free all-day Mexican culture fest in Dolores Park on the closest Saturday to May 5. sfcincodemayo.com</p>
             </div>
-
             </div>
+                           <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">See Event</button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                </div>
+              </div>
             
             <script>
             // Get the modal
@@ -417,10 +505,8 @@
         <div class="achievement-box"> <span class="count">179</span>
           <h4>SF Jazz Festival</h4>
            <br>
-          <button id="myBtn">See Event</button>
             <!-- The Modal -->
             <div id="myModal2" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
             <span class="close">&times;</span>
@@ -428,6 +514,15 @@
             </div>
 
             </div> 
+            
+                           <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">See Event</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                </div>
+              </div>
            
             <script>
             // Get the modal
@@ -464,7 +559,6 @@
           <h4>LGBT Pride Parade</h4>
             
           <br>
-          <button id="myBtn">See Event</button>
             <!-- The Modal -->
             <div id="myModal3" class="modal">
 
@@ -473,8 +567,16 @@
             <span class="close">&times;</span>
             <p>San Francisco, one of the first cities in the country to pass a gay rights ordinance back in the ’70s, has much to be proud of, and drag queens, leather daddies and dykes on bikes all take the opportunity to show off their true rainbow colors. Don’t miss the Pink Saturday block party the night before the parade, when most of the Castro is closed off for one of the city’s largest after-dark street parties. sfpride.org</p>
             </div>
-
             </div> 
+            
+            
+            <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">See Event</button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog">
+                </div>
+              </div>
             
             <script>
             // Get the modal
@@ -508,10 +610,8 @@
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="achievement-box"> <span class="count">245</span>
-          <h4>Outside Lands</h4>
-            
+          <h4>Outside Lands</h4>    
           <br>
-          <button id="myBtn">See Event</button>
             <!-- The Modal -->
             <div id="myModal4" class="modal">
 
@@ -520,9 +620,15 @@
             <span class="close">&times;</span>
             <p>Outside Lands is probably the music event of the summer for SF, drawing roughly 200,000 revelers over three days. If you don’t mind the hefty prices (starting at $115 for a general admission day pass), it’s a smorgasbord of sounds for everybody, with lineups of up to 100 artists including big headliners (in years past, everything from Dave Matthews Band and Arctic Monkeys to Metallica and The Killers).</p>
             </div>
-
             </div> 
-            
+              
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4">See Event</button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal4" role="dialog">
+                <div class="modal-dialog">
+                </div>
+              </div>
             <script>
             // Get the modal
                 var modal = document.getElementById('myModal4');
@@ -533,13 +639,14 @@
             // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
                 
+                
                 // When the user clicks the button, open the modal 
-                btn.onclick = function() {
+                btn.onclick = () => {
                 modal.style.display = "block";
                 }
 
                 // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
+                span.onclick = () function() {
                 modal.style.display = "none";
                 }
 
@@ -550,10 +657,8 @@
                 }
                 }
             </script>
-            
-            
         </div>
-      </div>
+      </div>       
     </div>
   </div>
 </div>
@@ -630,10 +735,11 @@
   </div>
 </div>
     
-    
+ <!-- Validate Forms -->   
 <script>
     
-function formValidation()
+
+var formValidation = () =>
     {
       var vName = document.sentMessage.name;
       var vEmail = document.sentMessage.email;
@@ -643,9 +749,9 @@ function formValidation()
       var vCuisine = document.sentMessage.cuisine;
       var vExtraInformation = document.sentMessage.extraInformation;
 
-      if(allLetter(vName))
+      if(allLetter())
       {
-      if(ValidateEmail(vEmail))
+      if(ValidateEmail())
       {
       if(alphaNumeric(vPhone))
       {
@@ -659,7 +765,7 @@ function formValidation()
 
     }
 
-    function ValidateEmail(vEmail)
+    var ValidateEmail = (vEmail) =>
     {
       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(vemail.value.match(mailformat))
@@ -674,7 +780,7 @@ function formValidation()
         }
     }
 
-    function allLetter(vName)
+    var allLetter = (vName) =>
     {
       var letters = /^[A-Za-z]+$/;
         if(name.value.match(letters))
@@ -689,7 +795,7 @@ function formValidation()
         }
     }
 
-    function alphanumeric(vaddress)
+    var alphanumeric = (vaddress) =>
     {
       var letters = /^[0-9a-zA-Z]+$/;
         if(vaddress.value.match(letters))
@@ -701,31 +807,6 @@ function formValidation()
         alert('User address must have alphanumeric characters only');
         vaddress.focus();
         return false;
-        }
-      }
-
-      function validsex(umsex,ufsex)
-      {
-        x=0;
-
-        if(umsex.checked)
-        {
-          x++;
-        } if(ufsex.checked)
-        {
-          x++;
-        }
-        if(x==0)
-        {
-          alert('Select Male/Female');
-          umsex.focus();
-          return false;
-        }
-        else
-        {
-          alert('Form Succesfully Submitted');
-          window.location.reload()
-          return true;
         }
       }
 
@@ -754,23 +835,64 @@ function formValidation()
     
 
 <div id="social-section">
-  <div class="container">
-    <div class="social">
     
-      <ul>
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a href="#"><i class="fa fa-github"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-      </ul>
+
+  <div class="container">
+      
+    <div>
+      <h1 style="color:white">Countdown to San Franciso Pride Parade</h1>
+      <p id="countdownPride" style="color:white; font-family: sans-serif; font-size: 36pt; font-weight: 700;"></p>
+        
+      <script>
+
+       var countDownDate = new Date("Jun 24, 2018 15:37:25").getTime();
+        
+        var timer = () => {
+
+       var now = new Date().getTime();
+    
+ 
+       var distance = countDownDate - now;
+    
+
+       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+       document.getElementById("countdownPride").innerHTML = days + "d " + hours + "h "
+       + minutes + "m " + seconds + "s ";
+
+       if (distance < 0) {
+       clearInterval(x);
+        document.getElementById("countdownPride").innerHTML = "EXPIRED";
+    }
+}
+
+
+       var x = setInterval(timer, 1000);
+</script>
+
+      
+    </div>  
+      
+    <div class="social">
+        Website developed by Christie Molloy for class CS601 at Boston University
     </div>
+
+    <script>
+        <!--anon func -->
+        var message = () ={
+                alert('Welcome To My Final Project - Christie Molloy');
+            }
+            message();   
+        
+      </script> 
   </div>
 </div>
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!-- jQuery --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
@@ -781,7 +903,8 @@ function formValidation()
 <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
 <script type="text/javascript" src="js/jquery.isotope.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/typeahead.js"></script> 
 
 <!-- Javascripts
     ================================================== --> 

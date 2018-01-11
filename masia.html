@@ -1,148 +1,392 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Make America Say it Again</title>
-        <meta name="description" content="An interactive getting started guide for Brackets.">
-        <link rel="stylesheet" href="stylesheet2.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-            $(".ddicon").click(function(){
-                $(".nav").toggle();
-            });
-        });
-        </script>
-        <style> 
-            @font-face {
-            font-family: h9font;
-            src: url(BebasNeue.otf);
-            }
+  <meta charset="utf-8">
+  <title>Press Attending</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <meta property="og:title" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
 
-            div {
-            font-family: h9font;
-            }
-        </style>
-    </head>
-    
-     <body>
-         
-   <div class="home">
-    <a href="index4.html">
-            <img src="CM-LOGO.png" width="100px" height="100px" >
-        </a>
-        </div>
-         
-    
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+  
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/modernizr-2.7.1.js"></script>
         
-          <div class="main-nav">
-      <ul class="nav">
-        <li><a href="#">     </a></li>
-        <li><a href="#">     </a></li>
-          <li><a href="#">     </a></li>
-          <li><a href="#">     </a></li>
-        <li><a href="http://www.linkedin.com/in/christiemolloyy">linkedIn</a></li>
-        <li><a href="#">\\\\</a></li>
-        <li><a href="https://www.instagram.com/d.by.c/">d.by.c</a></li>
-      </ul>
- </div>
-
-        
-     <div class="second-nav">
-        <ul class="nav-2">
-        <li><a href="ux.html">UX</a></li>
-        <li><a href="web.html">Web</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="print.html">Print</a></li>
-        </ul>
-        </div>
-
-  <div class="third-nav">
-        <ul class="nav-3">
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <br>
-        <li><a href="masia.html">Make America</a></li>
-        <li><a href="popup.html">The Election</a></li>
-        <li><a href="projector.html">Projections</a></li>
-        <li><a href="video.html">Autobio Video</a></li>
-        <li><a href="laser.html">Social Media</a></li>
-        <li><a href="bordersbook.html">Borders</a></li>
-
-        </ul>
-    </div>
-
-         
-         <h10>MAKE AMERICA SAY IT AGAIN</h10>
-         
-         <h16>
-            Task: Vinyl + A Current Issue
-        </h16>
-         
-         
-        <div class="p-3">
-         
-        <p>‘Make America Say it Again’ is a response to Donald Trump’s Make America Great Again campaign. By utilizing the power of design, I sourced direct quotes that Trump has stated over the recent years and positioned them in locations around Boston University that furthered how immoral, racist or just plain absurd they are. By forcing Americans to “say it” again, the project serves to remind students of words that the potential next future President of America, Donald Trump, believes in. I removed Trump’s name from the quotes. The more anonymous they were, the higher the shock value, and the more people would realize how immoral Trump’s words are. If I were to have included Trump’s name in the quote, my project would have paralleled with any news article or CNN report, and people would have thought “classic Trump” as they walked by the quote. But take away “Trump”, and the shock value restarts. None of the quotes are intended to offend or hurt people, they are only meant to remind and inform students of Donald Trump’s statements. I definitely didn’t expect this project to attract so much attention. I understood that people would react negatively to the quotes and take them down, but I definitely undervalued the powerful impact social media can play in certain events and in certain places. So far the campaign has been featured on two articles by ‘The Tab’, see links below, one which received over 800 shares and 2500 views. People have taken photos and posted them to facebook, instagram, and snapchat and someone even created their own hashtag for the project. The project was a success and even though I received a lot of negative attention and questioning, I would do it over again.  
-        </p>
+<style>
+    
+    @font-face {
+        font-family: circularBlack;
+        src: url(fonts/CircularStd-Black.otf);
+    }
+    
+    @font-face {
+        font-family: dinPro;
+        src: url(fonts/DINProRegular.otf);
+    }
+    
+    
+    
+    .columns {
+                width: 12%;
+                float: left;
+                font-family: h2font;
+                color: white;
+                
+            }
             
-        <a href="http://thetab.com/us/bu/2016/10/27/campus-reactions-make-america-say-campaign-8756"><h21>The Tab: Article 1</h21></a>
-        <br>
-        <a href="http://thetab.com/us/bu/2016/10/17/body-shaming-trump-quote-written-gsu-girls-bathroom-8513"><h21>The Tab: Article 2</h21></a>
-        <br>
-        </div> 
-         
-    <div class="proj_photos">
-        
-         
-    <img src="IMG_0042.JPG" width="399.2" height="285.12" >
+            .outsidecols {
+                float: left;
+                z-index: 9999;
+                -webkit-transform: rotate(-270deg); 
+                position: absolute;
+                top: 300px;
+                left: -60px;
+                
+            }
+            
+            .outsidecols2 {
+                float: right;
+                z-index: 9999;
+                -webkit-transform: rotate(-90deg); 
+                position: absolute;
+                top: 300px;
+                right: -60px;
+            }
+            
+            .outsidecols2 p {
+                float: right;
+                font-family: h4font;
+                font-weight: 700;
+                color: red;
+            }
+            
+            .outsidecols p {
+                float: left;
+                font-family: h4font;
+                font-weight: 700;
+                color: red;
+            }
+            
+            .parallax {
+                perspective: 1px;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+             }
 
-    <img src="IMG_0105.JPG" width="399.2" height="285.12" >
+            .parallax__layer {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            
+            .parallax__layer--base {
+                transform: translateZ(0);
+            }
+            
+            .parallax__layer--back {
+                transform: translateZ(-1px) scale(2);
+            }
+            
+            .parallax__layer--back2 {
+                transform: translateZ(-2px) scale(3);
+            }
+            
+            .parallax__layer--back3 {
+                transform: translateZ(-3px) scale(4);
+            }
+            
+            .parallax__group {
+                position: relative;
+                height: 100vh;
+                transform-style: preserve-3d;
+            }
+            
+            .big {
+                font-family: h4font;
+                font-size: 360pt;
+                color: red;
+                position: fixed;
+                transform: translateZ(-4px) scale(5);
+                
+                
+            }
+    
+            .h2new { 
+                text-align: left;
+                line-height: 1.2;
+                margin: 20px 0 ;
+                
+            }
+    
+    
+.container2 {
+    position: relative;
+    width: 100%;
+    margin: 2.5%;
+    }
 
-    <img src="IMG_0077.JPG" width="399.2" height="285.12" >
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
     
-    <img src="IMG_0067.JPG" width="399.2" height="285.12" >
-    
-    <img src="IMG_0144.JPG" width="399.2" height="285.12" >
+}
+
+.container2:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
         
-    <img src="IMG_0048.JPG" width="399.2" height="285.12" >
         
-    <img src="IMG_0083.JPG" width="399.2" height="285.12" >
+</style>
+  
+</head>
+
+<body>
+
     
-        <img src="IMG_0146.JPG" width="399.2" height="285.12" >
-    
-    
-        
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="logo" href="index.html"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#pricing" class="scroll"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
     </div>
-         
-         
-         
-   
-
-
     
+    
+    <header style="height: 75vh; background: linear-gradient(black, grey);">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="index.html"><h3 style="color: white;">Christie Molloy</h3></a>
+          </div>
+          <div class="col-xs-6 signin text-right navbar-nav">
+            <a href="#pricing" class="scroll"></a>&nbsp; &nbsp;
+              <a href="#"></a>&nbsp; &nbsp;
+              <a href="#"></a>
+          </div>
+        </div>
         
-      
-             
-      
-
-    </body>
-   
-         
-    
-  
-             
-    
-
-    
-         
-  
-             
+        <div class="row header-info">
+          <div class="col-sm-10 col-sm-offset-1 text-center">
+              <p class="captionStyle3">FALL 2016</p>
+              <h2 class="h2new wow fadeIn hStyle" data-wow-delay="0.5s">A student campaign in response to Trump’s political campaign.
+              </h2>
+              
+            <br />
      
-         
-         
-             
-             
-             
-             
+            <br />
+              
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+ 
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+    
+
+           
+    <div class="container pad-sm">
+        
+        
+        <div class="col-sm-3"></div>
+        
+        <div class="col-sm-9" style="float: left;"> 
+        
+        
+            <h2 style="color: black">Make America Say It Again</h2>
+        
+        </div>
+        
+        
+        
+    <div class="col-sm-3 pStyle" style="text-align: left">
+        Tools
+        <br>
+        Vinyl Cutter
+        <br>
+        Adobe Illustrator
+        <br>
+        Link here
+
+        </div>
+        
+        
+        
+        <div class="col-sm-9" style="float: left;"> 
+        
+            
+         <p class="pStyle" style="text-align: left">  
+         ‘Make America Say it Again’ is a response to Donald Trump’s Make America Great Again campaign. I sourced direct quotes from Trump and positioned them in locations around Boston University that furthered how immoral, racist or just plain absurd they are. By forcing Americans to “say it” again, the project serves to remind students of words that the potential (and now) President of America, Donald Trump, believes in. I removed Trump’s name from the quotes. The more anonymous they were, the higher the shock value, and the more people would realize how immoral Trump’s words are. If I were to have included Trump’s name in the quote, my project would have paralleled with any news article or CNN report, and people would have thought “classic Trump” as they walked by the quote. But take away “Trump”, and the shock value restarts. None of the quotes are intended to offend or hurt people, they are only meant to remind and inform students of Donald Trump’s statements. I definitely didn’t expect this project to attract so much attention. I understood that people would react negatively to the quotes and take them down, but I definitely undervalued the powerful impact social media can play in certain events and in certain places. So far the campaign has been featured on two articles by ‘The Tab’, see links below, one which received over 800 shares and 2500 views. People have taken photos and posted them to facebook, instagram, and snapchat and someone even created their own hashtag for the project. The project was a success and even though I received a lot of negative attention and questioning, I would do it over again.  
+
+         </p> 
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0021.JPG" width=100%;>
+        <p class="captionStyle2"><b>Title of the campaign</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0044.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed in the womens bathroom</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0059.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed near the International Relations classes</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0066.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed outside of Bank of America</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0075.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed outside of the library</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0104.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed on the mens bathroom door</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0137.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed on the bus stop</b></p>
+        </div>
+            
+        <div style="margin: 40px 0">    
+        <img src="img/IMG_0153.JPG" width=100%;>
+        <p class="captionStyle2"><b>Quote installed on a directory board</b></p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+        
+            
+            
+
+
+            
+        
+            
+        
+            
+
+            
+            
+        </div>
+          
+  
+          
+          
+          
+          
+      </div>
+        
+
+    
+    
+    
+    
+    <footer style="background-color: black">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-8 margin-20">
+            <ul class="list-inline social" style="color:white">
+              <li>Connect with me on </li>
+              <li><a href="https://www.twitter.com/christiemolloy1 "><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://au.linkedin.com/in/christiemolloyy"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/christiexx/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+
+              
+          </div>
+          
+          
+        </div>
+        
+      </div>
+    </footer>
+    
+    
+    <!-- Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+   
+    </body>
+</html>

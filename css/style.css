@@ -31,6 +31,8 @@ h5 {
 }
 p {
 	font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
 }
 a {
 	color: #0dad8d;

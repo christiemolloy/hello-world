@@ -1,50 +1,815 @@
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>current work - christie molloy</title>
-    
-        <style>
-            
-            ul {
-                list-style-type: none;
-                color: blue;
-                
-                
-            }
-            
-            li {
-                padding-left: 5%;
-            }
-            
-            a {
-                text-decoration-color:fuchsia;
-                color: fuchsia;
-                font-family: courier;
-                font-size: 28pt;
-            }
-            
-            h1 {
-                text-decoration-color:fuchsia;
-                color: fuchsia;
-                font-family: helvetica;
-                font-size: 28pt;
-                margin: 0;
-            }
+  <meta charset="utf-8">
+  <title>Christie Portfolio </title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <meta property="og:title" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+  
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/modernizr-2.7.1.js"></script>
         
-        </style>
-    </head>
+<style>
+    
+    @font-face {
+        font-family: circularBlack;
+        src: url(fonts/CircularStd-Black.otf);
+    }
+    
+    @font-face {
+        font-family: dinPro;
+        src: url(fonts/DINProRegular.otf);
+    }
     
     
-    <body>
     
-        <ul>
-            <h1>christie molloy</h1>
-            <h1>fall 17 subjects:</h1>
-            <li><a href="identityanthem.html"><b>AR300</b></a></li>
-            <li><a href="sanfranciscotours.html"><b>CS601</b></a></li>
-            <li><a href="http://cs-webapps.bu.edu/cgi-bin/cs108/cmolloy/christiefinalproject.py"><b>CS108</b></a></li>
-        </ul>
+    .columns {
+                width: 12%;
+                float: left;
+                font-family: h2font;
+                color: white;
+                
+            }
+            
+            .outsidecols {
+                float: left;
+                z-index: 9999;
+                -webkit-transform: rotate(-270deg); 
+                position: absolute;
+                top: 300px;
+                left: -60px;
+                
+            }
+            
+            .outsidecols2 {
+                float: right;
+                z-index: 9999;
+                -webkit-transform: rotate(-90deg); 
+                position: absolute;
+                top: 300px;
+                right: -60px;
+            }
+            
+            .outsidecols2 p {
+                float: right;
+                font-family: h4font;
+                font-weight: 700;
+                color: red;
+            }
+            
+            .outsidecols p {
+                float: left;
+                font-family: h4font;
+                font-weight: 700;
+                color: red;
+            }
+            
+            .parallax {
+                perspective: 1px;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+             }
+
+            .parallax__layer {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            
+            .parallax__layer--base {
+                transform: translateZ(0);
+            }
+            
+            .parallax__layer--back {
+                transform: translateZ(-1px) scale(2);
+            }
+            
+            .parallax__layer--back2 {
+                transform: translateZ(-2px) scale(3);
+            }
+            
+            .parallax__layer--back3 {
+                transform: translateZ(-3px) scale(4);
+            }
+            
+            .parallax__group {
+                position: relative;
+                height: 100vh;
+                transform-style: preserve-3d;
+            }
+            
+            .big {
+                font-family: h4font;
+                font-size: 360pt;
+                color: red;
+                position: fixed;
+                transform: translateZ(-4px) scale(5);
+            }
     
+    
+.container2 {
+    position: relative;
+    width: 100%;
+    margin: 2.5%;
+    }
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+    
+}
+
+.container2:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+        
+        
+</style>
+  
+</head>
+
+<body>
+
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="logo" href="index.html"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://www.christiemolloy.com/christiemolloyresume.pdf" class="scroll">About</a></li>
+            <li><a href="#work" class="scroll">Work</a></li>
+            <li><a href="#contact" class="scroll">Contact</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+        
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="index.html"><h3 style="color: white;">Christie Molloy</h3></a>
+          </div>
+          <div class="col-xs-6 signin text-right navbar-nav">
+            <a href="#https://www.christiemolloy.com/christiemolloyresume.pdf" class="scroll">About</a>&nbsp; &nbsp;
+              <a href="#work" class="scroll">Work</a>&nbsp; &nbsp;
+              <a href="#contact" class="scroll">Contact</a>
+          </div>
+        </div>
+        
+        <div class="row header-info">
+          <div class="col-sm-10 col-sm-offset-1 text-center">
+              <h1 class="wow fadeIn hStyle" data-wow-delay="0.5s" style="font-size: 50pt;">Christie Molloy.</h1>
+              <h2 class="wow fadeIn hStyle" data-wow-delay="0.5s">Visual and Product Designer. <br>
+                  Previously <a href="https://twitter.com/" style="text-decoration-line: underline">Twitter</a>, <a href="https://splashthat.com/" style="text-decoration-line: underline">Splash</a> and <a href="https://36creative.com/" style="text-decoration-line: underline">36creative.</a></h2>
+            <br />
+     
+            <br />
+              
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 wow fadeInUp" data-wow-delay="1s">
+                    <a href="#work" class="btn-secondary btn-lg scroll ">See Work</a>
+                  </div>
+                  
+                </div><!--End Button Row-->  
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!--<div class="mouse-icon hidden-xs">
+				<div class="scroll"></div>
+			</div>-->
+    
+    <section id="work" class="" style="background-color: #f4f4f4">
+
+        
+          <!-- base layer -->   
+                  
+            <div class="container" style="pad-xl" >
+                
+                
+                    
+                    <div class="col-sm-4" style="padding: 2.5%">
+                        
+                        <!-- row 0 -->
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            
+                                <img src="img/popUP.jpg" alt="Avatar" class="image imageBorder" >
+                                
+                                <div class="overlay">
+                                <div class="text">COMING SOON.</div>
+                                </div>
+                                
+                            
+                            </div>
+                            <p class="captionStyle">Pop Up</p>
+                            <p class="captionStyle2">iOS Design</p>
+                            
+                        </div>
+                        
+                        
+                        <!-- row 1 -->
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="supremeremix.html">
+                                <img src="img/newSupreme.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">A remix between Supreme and Chinese-Takeout.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Supreme Remix</p>
+                            <p class="captionStyle2">Print Design</p>
+                            
+                        </div>
+                        
+                        <!-- row 2 -->
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="basecase.html">
+                                <img src="img/basecase.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">An app making the web a less scary place one step at a time. </div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Base Case</p>
+                            <p class="captionStyle2">iOS design/development</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="masia.html">
+                                <img src="img/masia2.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">A student campaign in response to Trump’s political campaign.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Make America Say It Again</p>
+                            <p class="captionStyle2">Campaign Design</p>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="cautiontape.html">
+                                <img src="img/ENTER.png" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">What lies behind the caution tape?</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">You Were Cautioned</p>
+                            <p class="captionStyle2">Book Design</p>
+                            
+                        </div>
+                        
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="projectfeelings.html">
+                                <img src="img/projections.png" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">You’re not alone if you’re lonely.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Project Your Feelings</p>
+                            <p class="captionStyle2">Photography/Projector</p>
+                            
+                        </div>
+                        
+                        
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="lifeinillustations.html">
+                                <img src="img/FLAMINGO.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">Illustrations.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Life in Illustrations</p>
+                            <p class="captionStyle2">Illustrations</p>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                
+                    <div class="col-sm-4" style="padding: 2.5%">
+                        
+                       <!-- row 0 --> 
+                       
+                       <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="terningthetable.html">
+                                <img src="img/terningthetable-02.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">A campaign to increase the percent of females interning in tech. </div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Terning The Table</p>
+                            <p class="captionStyle2">Campaign Design</p>
+                            
+                        </div>
+                        
+                        <!-- row 1 --> 
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="lineup.html">
+                                <img src="img/lineup.jpg" alt="Avatar" class="image imageBorder" >
+                                
+                                <div class="overlay">
+                                <div class="text">Personalize your music experience by creating playlists that combine both your music and photo libraries.</div>
+                                </div>
+                                
+                            </a>
+                            </div>
+                            <p class="captionStyle">Line Up</p>
+                            <p class="captionStyle2">iOS Mobile Design</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="unhealthydistortions.html">
+                                <img src="img/distort2.jpg" alt="Avatar" class="image imageBorder" >
+                                
+                                <div class="overlay">
+                                <div class="text">Everyday we are subconsciously fed unhealthy distortions, whether society realizes they’re unhealthy or not is a different story.
+                                    </div>
+                                </div>
+                                
+                            </a>
+                            </div>
+                            <p class="captionStyle">Unhealthy Distortions</p>
+                            <p class="captionStyle2">Photography/Scanner</p>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="designthinking.html">
+                                <img src="img/dThinking.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">Your handbook to becoming a better designer.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Design Thinking</p>
+                            <p class="captionStyle2">Book Design</p>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="theelection.html">
+                                <img src="img/makeAmericaWhat.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">An unbiased, opinionated response to the 2016 election.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">The Election</p>
+                            <p class="captionStyle2">Poster Design</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="summerwheels.html">
+                                <img src="img/SUMMMER.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">A book inspired by my own inspirations.
+</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Summer Wheels</p>
+                            <p class="captionStyle2">Book Design</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="pressattending.html">
+                                <img src="img/EVENT.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">Posters.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Press Attending</p>
+                            <p class="captionStyle2">Digital Poster Design</p>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                
+                
+                    <div class="col-sm-4" style="padding: 2.5%">
+                        
+                        <!-- row 0 --> 
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="identityanthem.html">
+                                <img src="img/identityanthem.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">What does the music that you listen to say about you?</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Identity Anthem</p>
+                            <p class="captionStyle2">Web Design/Development</p>
+
+                        </div>
+                        
+                        <!-- row 1 --> 
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="onlinestore.html">
+                                <img src="img/onlineCanvas.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">An online community for Boston University’s CFA students to sell their artwork.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">CFA Online</p>
+                            <p class="captionStyle2">Web Design/Development</p>
+
+                        </div>
+                        
+                        
+                        <!-- row 2 -->
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="visitsanfrancisco.html">
+                                <img src="img/guideTo.jpg" alt="Avatar" class="image imageBorder" >
+                                
+                                <div class="overlay">
+                                <div class="text">An interns guide to San Francisco.</div>
+                                </div>
+                                
+                            </a>
+                            </div>
+                            <p class="captionStyle">Visit SF</p>
+                            <p class="captionStyle2">Web Development</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="embrace.html">
+                                <img src="img/EMBRACEE.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">Embrace your differences with this customizable, functional and stylish, bracelet designed for those with OCD. 
+</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Embrace It</p>
+                            <p class="captionStyle2">UX Design</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="fiftyiterations.html">
+                                <img src="img/pubTheatre.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">Recreating the same energy 50 times over.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Fifty Days</p>
+                            <p class="captionStyle2">Print/Digital Design</p>
+                            
+                        </div>
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="systemofrelationships.html">
+                                <img src="img/systemOfRelationships-53.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">An installation assessing relationships through online communication. </div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">The System of Relationships</p>
+                            <p class="captionStyle2">Exhibition Design</p>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="rowImg" >
+                            <div class="container2" style="">
+                            <a href="logos.html">
+                                <img src="img/brandYourself.jpg" alt="Avatar" class="image imageBorder" >
+                                <div class="overlay">
+                                <div class="text">Logos.</div>
+                                </div>
+                            </a>
+                            </div>
+                            <p class="captionStyle">Brand Yourself</p>
+                            <p class="captionStyle2">Logo Development</p>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                    
+
+            
+                
+        </div>
+
+        
+    </section>
+    
+        
+    <!--
+    <section id="main-info" class="pad-xl">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+				    <ul>
+                        <li>line up</li>
+                        <li>identity anthem</li>
+                        <li>terning the table</li>
+                        <li>base case</li>
+                        <li>embrace it</li>
+                        <li>visit sf</li>
+                        <li>online canvas</li>
+                        <li>expert designer</li>
+                        <li>the system of relationships</li>
+                        <li>make america say it again</li>
+                    </ul>
+			    </div>
+			    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.8s">
+				    <hr  class="line blue">
+				    <h3>App Feature One Here</h3>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut est facilisis, eu elementum mi volutpat. Pellentesque ac tristique nisi.</p>
+			    </div>
+		    </div>
+	    </div>
+    </section>
+    -->
+        
+        
+    <!--Pricing
+    <section id="pricing" class="pad-lg">
+      <div class="container">
+        <div class="row margin-40">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
+            <h2 class="white">Pricing</h2>
+            <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.</p>
+          </div>
+        </div>
+        
+        <div class="row margin-50">
+          
+          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1s">
+            <br />
+            <ul class="list-unstyled pricing-table text-center">
+    					<li class="headline"><h5 class="white">Personal</h5></li>
+    					<li class="price"><div class="amount">$5<small>/m</small></div></li>
+    					<li class="info">2 row section for you package information. You can include all details or icons</li>
+    					<li class="features first">Up To 25 Projects</li>
+    					<li class="features">10GB Storage</li>
+    					<li class="features">Other info</li>
+    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
+    				</ul>
+          </div>
+          
+          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="0.4s">
+            <ul class="list-unstyled pricing-table active text-center">
+    					<li class="headline"><h5 class="white">Professional</h5></li>
+    					<li class="price"><div class="amount">$12<small>/m</small></div></li>
+    					<li class="info">2 row section for you package information. You can include all details or icons</li>
+    					<li class="features first">Up To 25 Projects</li>
+    					<li class="features">10GB Storage</li>
+    					<li class="features">Other info</li>
+    					<li class="features">Other info</li>
+    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
+    				</ul>
+          </div>
+          
+          <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1.3s">
+            <br />
+            <ul class="list-unstyled pricing-table text-center">
+    					<li class="headline"><h5 class="white">Business</h5></li>
+    					<li class="price"><div class="amount">$24<small>/m</small></div></li>
+    					<li class="info">2 row section for you package information. You can include all details or icons</li>
+    					<li class="features first">Up To 25 Projects</li>
+    					<li class="features">10GB Storage</li>
+    					<li class="features">Other info</li>
+    					<li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
+    				</ul>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    -->
+    
+    
+    
+    
+    <section id="invite" class="pad-sm" style="background-color:#172341">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 text-center">
+        
+            
+            <br />
+              
+            <div class="container">
+                
+            <h2 style="color:white;">Get in Touch</h2>
+		    <div class="row">
+			    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
+				    
+				    <h3 style="color:white;">Print Design</h3>
+				    <p class="pStyle" style="color:white;">Poster design, book design, identity development and logo creation, and campaign design.</p>
+			    </div>
+			    <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
+				    
+				    <h3 style="color:white;">UX Mobile Design</h3>
+				    <p class="pStyle" style="color:white;">Wireframes, mockups in Sketch and fully working prototypes for iOS and Android development.</p>
+			    </div>
+			    <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
+				    
+				    <h3 style="color:white;">Web Design/Development</h3>
+				    <p class="pStyle" style="color:white;">Design and front-end development of cutting-edge websites using javascript, jQuery and API integration.</p>
+			    </div>
+		    </div>
+                
+                <a href="mailto:EMAILADDRESS"><button class="btn btn-primary btn-lg" style="background-color:white; color: #172341">Email Me</button></a>
+	           
+            </div>  
+              
+              
+              
+            
+            
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--
+    <section id="press" class="pad-sm">
+      <div class="container">
+        
+        <div class="row margin-30 news-container">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="0.8s">
+            <a href="#" target="_blank">
+            <img class="news-img pull-left" src="img/press-01.jpg" alt="Tech Crunch">
+            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.<br /> 
+            <small><em>Tech Crunch - January 15, 2015</em></small></p>
+            </a>
+          </div>
+        </div>
+        
+        <div class="row margin-30 news-container">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
+            <a href="#" target="_blank">
+            <img class="news-img pull-left" src="img/press-02.jpg" alt="Forbes">
+            <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut. <br /> 
+            <small><em>Forbes - Feb 25, 2015</em></small></p>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    -->
+    
+    
+    <footer id="contact" style="background-color: black">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-8 margin-20">
+            <ul class="list-inline social" style="color:white">
+              <li>Connect with me on </li>
+              <li><a href="https://www.twitter.com/christiemolloy1 "><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://au.linkedin.com/in/christiemolloyy"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/christiexx/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+
+              
+          </div>
+          
+          
+        </div>
+        
+      </div>
+    </footer>
+    
+    
+    <!-- Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+   
     </body>
 </html>

@@ -28,7 +28,7 @@ h1 {
   font-size: 55px;
   line-height: 55px;
   letter-spacing: -1px;
-  color: #ffffff;
+  color: blue;
   font-weight: 700;
 }
 
@@ -36,7 +36,7 @@ h2 {
   font-size: 40px;
   line-height: 40px;
   etter-spacing: -0.5px;
-  color: #ffffff;
+  color: blue;
   font-weight: 700;
 }
 
@@ -146,13 +146,13 @@ a:hover, a:focus {
 }
 
 .btn-secondary {
-  background-color: #ffffff;
-  color: #231f20;
+  background-color: blue;
+  color: white;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
-  background-color: #002BDC;
-  color: #ffffff;
+  background-color: white;
+  color: blue;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
@@ -248,7 +248,8 @@ float: left;
 
 .navbar {
     border: 0px solid rgba(0, 0, 0, 0);
-    background: black;
+    background: blue;
+    color: white;
     margin: auto;
     min-height: 60px;
     padding-top: 8px;
@@ -262,7 +263,7 @@ float: left;
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-nav a {
-    color: #ffffff;
+    color: blue;
     font-size: 14px;
     letter-spacing: 1px;
 }
@@ -300,7 +301,7 @@ float: left;
    Main styles
    ========================================================================== */
 header {
-  background: linear-gradient(#416CC0, #20C1FA);
+  background: white;
   width: 100%;
   padding: 20px 10px 60px 10px;
   height: 100vh;

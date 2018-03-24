@@ -1,95 +1,45 @@
-
-function main() {
-
-(function () {
-   'use strict';
-
-   /* ==============================================
-  	Testimonial Slider
-  	=============================================== */ 
-
-  	$('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 40
-            }, 900);
-            return false;
-          }
+$(document).ready(function(){
+  
+  
+  //------------------------------------//
+  //Navbar//
+  //------------------------------------//
+    	var menu = $('.navbar');
+    	$(window).bind('scroll', function(e){
+    		if($(window).scrollTop() > 140){
+    			if(!menu.hasClass('open')){
+    				menu.addClass('open');
+    			}
+    		}else{
+    			if(menu.hasClass('open')){
+    				menu.removeClass('open');
+    			}
+    		}
+    	});
+  
+  
+  //------------------------------------//
+  //Scroll To//
+  //------------------------------------//
+  $(".scroll").click(function(event){		
+  	event.preventDefault();
+  	$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+  	
+  });
+  
+  //------------------------------------//
+  //Wow Animation//
+  //------------------------------------// 
+  wow = new WOW(
+        {
+          boxClass:     'wow',      // animated element css class (default is wow)
+          animateClass: 'animated', // animation css class (default is animated)
+          offset:       0,          // distance to the element when triggering the animation (default is 0)
+          mobile:       false        // trigger animations on mobile devices (true is default)
         }
-      });
+      );
+      wow.init();
 
-    /*====================================
-    Show Menu on Book
-    ======================================*/
-    $(window).bind('scroll', function() {
-        var navHeight = $(window).height() - 500;
-        if ($(window).scrollTop() > navHeight) {
-            $('.navbar-default').addClass('on');
-        } else {
-            $('.navbar-default').removeClass('on');
-        }
-    });
 
-    $('body').scrollspy({ 
-        target: '.navbar-default',
-        offset: 80
-    });
-
-  	/*====================================
-    Portfolio Isotope Filter
-    ======================================*/
-    $(window).load(function() {
-        var $container = $('.portfolio-items');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        $('.cat a').click(function() {
-            $('.cat .active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
-
-    });
-
-  	/*====================================
-    CounterUp
-    ======================================*/	
-
-	$(document).ready(function( $ ) {
-		if($("span.count").length > 0){	
-			$('span.count').counterUp({
-					delay: 10, // the delay time in ms
-			time: 1000 // the speed time in ms
-			});
-		}
-	});
 	
-  	/*====================================
-    Pretty Photo
-    ======================================*/
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		social_tools: false
-	});	
-
-}());
-
-
-}
-main();
+});
